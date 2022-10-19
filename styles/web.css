@@ -1,0 +1,516 @@
+@font-face {
+  font-family: "sansationregular";
+  src: url("./fontes/sansation-regular-webfont.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationbold";
+  src: url("./sansation-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationbold_italic";
+  src: url("./sansation-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationitalic";
+  src: url("./sansation-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansation_lightlight";
+  src: url("./sansation-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansation_lightlight_italic";
+  src: url("./sansation-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  width: 100vw;
+  height: 100vh;
+}
+html * {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html body {
+  font-family: sansationregular;
+  background-color: #F1A661;
+  overflow: hidden;
+}
+html body header {
+  height: 10vh;
+  width: 100vw;
+}
+html body header .menu-container {
+  display: grid;
+  place-items: center;
+}
+html body header .menu-container .menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80vw;
+  height: 10vh;
+}
+html body header .menu-container .menu li > a {
+  color: rgba(255, 255, 255, 0);
+  font-size: calc(1vw + 1vh);
+  transition: color 3s ease;
+}
+html body header .menu-container .menu li > .show {
+  color: rgba(255, 255, 255, 0.7);
+}
+html body main {
+  height: 80vh;
+  width: 100vw;
+}
+html body main .paiDeTodos-container {
+  position: relative;
+  display: flex;
+  height: 80vh;
+  width: 100vw;
+}
+html body main .paiDeTodos-container > div {
+  height: 80vh;
+  width: 100vw;
+  border-radius: 50px;
+  background-color: rgba(254, 254, 254, 0.9);
+  position: absolute;
+  right: -100vw;
+  top: 0px;
+  transition: right 3s, top 0s 3s;
+}
+@font-face {
+  font-family: "sansationregular";
+  src: url("./fontes/sansation-regular-webfont.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationbold";
+  src: url("./sansation-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationbold_italic";
+  src: url("./sansation-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationitalic";
+  src: url("./sansation-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansation_lightlight";
+  src: url("./sansation-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansation_lightlight_italic";
+  src: url("./sansation-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html body main .paiDeTodos-container .alert-pai-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.4);
+  gap: 40px;
+}
+html body main .paiDeTodos-container .alert-pai-container h1 {
+  font-size: max(2vw, 2vh);
+  font-weight: bold;
+  margin-top: 20px;
+}
+html body main .paiDeTodos-container .alert-pai-container img {
+  width: max(15vw, 15vh);
+}
+html body main .paiDeTodos-container .alert-pai-container .botoes-container {
+  display: flex;
+  gap: 40px;
+}
+html body main .paiDeTodos-container .alert-pai-container .botoes-container > div {
+  background-color: #F1A661;
+  padding: max(1.8vw, 1.8vh) max(3vw, 3vh) max(1.8vw, 1.8vh) max(3vw, 3vh);
+  border-radius: 40px;
+  font-size: calc(0.5vw + 1.5vh);
+  font-weight: bold;
+  cursor: pointer;
+}
+@font-face {
+  font-family: "sansationregular";
+  src: url("./fontes/sansation-regular-webfont.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationbold";
+  src: url("./sansation-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationbold_italic";
+  src: url("./sansation-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationitalic";
+  src: url("./sansation-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansation_lightlight";
+  src: url("./sansation-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansation_lightlight_italic";
+  src: url("./sansation-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html body main .paiDeTodos-container .home-pai-container {
+  display: flex;
+}
+html body main .paiDeTodos-container .home-pai-container .left-container {
+  width: 50vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: calc(0.5vw + 1vh);
+  gap: 20px;
+}
+html body main .paiDeTodos-container .home-pai-container .left-container .socials-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+html body main .paiDeTodos-container .home-pai-container .left-container .socials-container > img {
+  width: 10%;
+  cursor: pointer;
+}
+html body main .paiDeTodos-container .home-pai-container .left-container > span {
+  font-weight: bold;
+}
+html body main .paiDeTodos-container .home-pai-container .left-container > h1 {
+  text-align: center;
+  width: 10em;
+}
+html body main .paiDeTodos-container .home-pai-container .right-container {
+  width: 50vw;
+  height: 80vh;
+  display: grid;
+  place-items: center;
+}
+html body main .paiDeTodos-container .home-pai-container .right-container > div {
+  width: clamp(500px, 30vw, 700px);
+}
+html body main .paiDeTodos-container .home-pai-container .right-container > div > img {
+  width: 100%;
+  object-fit: fill;
+}
+@font-face {
+  font-family: "sansationregular";
+  src: url("./fontes/sansation-regular-webfont.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationbold";
+  src: url("./sansation-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationbold_italic";
+  src: url("./sansation-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationitalic";
+  src: url("./sansation-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansation_lightlight";
+  src: url("./sansation-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansation_lightlight_italic";
+  src: url("./sansation-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html body main .paiDeTodos-container .project-pai-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body main .paiDeTodos-container .project-pai-container .left-container {
+  height: 70vh;
+  width: 80vw;
+  gap: 30px;
+  overflow: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html body main .paiDeTodos-container .project-pai-container .left-container .project-container {
+  width: clamp(300px, 500px, 25vw);
+  height: 50%;
+  background-color: #FFD8A9;
+  border-left: 32px solid #F1A661;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+html body main .paiDeTodos-container .project-pai-container .left-container .project-container > span {
+  color: #ffffff;
+  font-size: 1.6em;
+  font-weight: bold;
+  -webkit-text-stroke: 0.7px #F1A661;
+  transform: rotate(-45deg);
+}
+html body main .paiDeTodos-container .project-pai-container .left-container .project-container > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 400%;
+  height: 400%;
+  transform: scale(0.25);
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+html body main .paiDeTodos-container .project-pai-container .left-container::-webkit-scrollbar {
+  display: none;
+}
+html body main .paiDeTodos-container .project-pai-container .right-container {
+  height: 70vh;
+  width: 15vw;
+  display: grid;
+  place-items: center;
+}
+html body main .paiDeTodos-container .project-pai-container .right-container > img {
+  cursor: pointer;
+  margin-right: 10%;
+  width: max(100px, 5vw);
+}
+@font-face {
+  font-family: "sansationregular";
+  src: url("./fontes/sansation-regular-webfont.woff") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationbold";
+  src: url("./sansation-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationbold_italic";
+  src: url("./sansation-bolditalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansationitalic";
+  src: url("./sansation-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansation_lightlight";
+  src: url("./sansation-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "sansation_lightlight_italic";
+  src: url("./sansation-lightitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container {
+  height: 65vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container {
+  width: 85vw;
+  height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container {
+  background-color: #FFD8A9;
+  display: flex;
+  align-items: center;
+  width: 60vw;
+  height: 30vh;
+  border-radius: 30px;
+  margin-right: 90px;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container {
+  height: 100%;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container > div {
+  background-color: #F1A661;
+  cursor: pointer;
+  font-size: calc(0.5vh + 1vw);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.7);
+  height: 33.3333333333%;
+  display: grid;
+  place-items: center;
+  padding: 0 2vw 0 2vw;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container > #contactMeBTN {
+  border-top-left-radius: 30px;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container > #referencesBTN {
+  border-bottom-left-radius: 30px;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container::-webkit-scrollbar {
+  display: none;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container::-webkit-scrollbar {
+  display: none;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container {
+  position: relative;
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .contacMe-container {
+  visibility: hidden;
+  position: absolute;
+  transform: rotateX(90deg);
+  transition: transform 1.5s, visibility 0s;
+  color: rgba(0, 0, 0, 0.9);
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .contacMe-container > ul li {
+  list-style: disc;
+  font-size: calc(1vw + 1vh);
+  margin: 40px;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .bio-container {
+  visibility: hidden;
+  position: absolute;
+  transform: rotateX(90deg);
+  transition: transform 1.5s, visibility 0s;
+  margin: 5px 20px;
+  margin-top: 1vw;
+  color: rgba(0, 0, 0, 0.9);
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .bio-container > span {
+  font-size: calc(1vw + 1vh);
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .references-container {
+  visibility: hidden;
+  position: absolute;
+  transform: rotateX(90deg);
+  transition: transform 1.5s, visibility 0s;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .references-container > ul li {
+  list-style: disc;
+  font-size: calc(1vw + 1vh);
+  margin: 40px;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .references-container > ul li a {
+  display: block;
+  font-size: calc(1vw + 1vh);
+  color: rgba(0, 0, 0, 0.9);
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container > .show {
+  visibility: visible;
+  transform: rotateX(0deg);
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .right-container {
+  width: 15vw;
+  height: 65vh;
+  display: grid;
+  place-items: center;
+}
+html body main .paiDeTodos-container .bio-pai-container .up-container .right-container > img {
+  cursor: pointer;
+  width: max(100px, 3vw);
+}
+html body main .paiDeTodos-container .bio-pai-container .down-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 15vh;
+  font-size: calc(1vw + 1vh);
+}
+html body main .paiDeTodos-container .bio-pai-container .down-container > img {
+  width: max(150px, 10vw);
+  margin-bottom: 30px;
+}
+html body main .paiDeTodos-container > .moved-left {
+  right: 100vw;
+  top: -100vh;
+}
+html body main .paiDeTodos-container > .moved-right {
+  right: 0px;
+}
+html body footer {
+  display: grid;
+  place-items: center;
+  height: 10vh;
+  width: 100vw;
+}
+html body footer .copyright-container {
+  color: rgba(255, 255, 255, 0.7);
+  display: grid;
+  place-items: center;
+  font-size: calc(1vw + 1vh);
+}
+
+/*# sourceMappingURL=web.css.map */

@@ -1,0 +1,7 @@
+.home-container,
+.links-container,
+.projects-container,
+.bio-container,
+.goodbye-container {
+  visibility: hidden;
+}

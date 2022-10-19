@@ -1,0 +1,106 @@
+@use 'variables'
+
+.bio-pai-container
+    .up-container
+        height: 65vh
+        width: 100vw
+        display: flex
+        justify-content: center
+        align-items: center
+        .left-container
+            width: 85vw
+            height: 65vh
+            display: flex
+            align-items: center
+            justify-content: flex-end
+            .caixa-bio-container
+                background-color: #FFD8A9
+                display: flex
+                align-items: center
+                width: 60vw
+                height: 30vh
+                border-radius: 30px
+                margin-right: 90px
+                .botoes-container
+                    height: 100%
+                    > div
+                        background-color: #F1A661
+                        cursor: pointer
+                        font-size: calc( 0.5vh + 1vw )
+                        font-weight: 500
+                        color: rgba(255, 255, 255, .7)
+                        height: calc(100%/3)
+                        display: grid
+                        place-items: center
+                        padding: 0 2vw 0 2vw
+                    > #contactMeBTN
+                        border-top-left-radius: 30px
+                    > #referencesBTN
+                        border-bottom-left-radius: 30px
+                .botoes-container::-webkit-scrollbar
+                    display: none
+                .conteudo-container::-webkit-scrollbar
+                    display: none
+                .conteudo-container
+                    position: relative
+                    text-align: left
+                    width: 100%
+                    height: 100%
+                    transform-style: preserve-3d
+                    overflow: scroll
+                    -ms-overflow-style: none
+                    scrollbar-width: none
+                    .contacMe-container
+                        visibility: hidden
+                        position: absolute
+                        transform: rotateX(90deg)
+                        transition: transform 1.5s, visibility 0s
+                        color: rgba(0, 0, 0, .9)
+                        > ul li
+                            list-style: disc
+                            font-size: calc( 1vw + 1vh )
+                            margin: 40px
+                    .bio-container
+                        visibility: hidden
+                        position: absolute
+                        transform: rotateX(90deg)
+                        transition: transform 1.5s, visibility 0s
+                        margin: 5px 20px
+                        margin-top: 1vw
+                        color: rgba(0, 0, 0, .9)
+                        > span
+                            font-size: calc( 1vw + 1vh )
+                    .references-container
+                        visibility: hidden
+                        position: absolute
+                        transform: rotateX(90deg)
+                        transition: transform 1.5s, visibility 0s
+                        > ul li
+                            list-style: disc
+                            font-size: calc( 1vw + 1vh )
+                            margin: 40px
+                            a
+                                display: block
+                                font-size: calc( 1vw + 1vh )
+                                color: rgba(0, 0, 0, .9)
+                    > .show
+                        visibility: visible
+                        transform: rotateX(0deg)
+        .right-container
+            width: 15vw
+            height: 65vh
+            display: grid
+            place-items: center
+            > img
+                cursor: pointer
+                width: max(100px, 3vw)
+    .down-container
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 100vw
+        height: 15vh
+        font-size: calc( 1vw + 1vh )
+        > img
+            width: max(150px, 10vw)
+            margin-bottom: 30px

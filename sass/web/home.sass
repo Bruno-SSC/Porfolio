@@ -1,0 +1,35 @@
+@use 'variables'
+
+.home-pai-container
+    display: flex
+    .left-container
+        width: 50vw
+        height: 80vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        font-size: calc(0.5vw + 1vh)
+        gap: 20px
+        .socials-container
+            display: flex
+            justify-content: center
+            gap: 10px
+            > img
+                width: 10%
+                cursor: pointer
+        > span
+            font-weight: bold
+        > h1
+            text-align: center
+            width: 10em
+    .right-container
+        width: 50vw
+        height: 80vh
+        display: grid
+        place-items: center
+        > div
+            width: clamp(500px ,30vw, 700px)
+            > img
+                width: 100%
+                object-fit: fill

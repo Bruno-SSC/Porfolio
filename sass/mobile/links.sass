@@ -1,0 +1,29 @@
+.links-container
+    h1
+        text-align: center
+        margin-bottom: 15px
+        @include mixins.text-shadow
+    .btns-container
+        display: flex
+        flex-direction: column
+        gap: 65px
+        margin-top: 65px
+        /* adicionar um efeito nos botões ao clicar */
+        > div
+            background-color: #F7CAA0
+            display: flex
+            justify-content: space-between
+            align-items: center
+            border-radius: 10px
+            > h2
+                margin-left: 15%
+                font-weight: 400
+                color: white
+                -webkit-text-stroke: .90px #F1A661
+            > div
+                height: max(10vh, 15vw)
+                width: max(10vh, 15vw)
+                > img
+                    width: 100%
+                    height: 100%
+                    object-fit: fill
