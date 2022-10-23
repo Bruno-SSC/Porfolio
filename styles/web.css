@@ -236,6 +236,11 @@ html body main .paiDeTodos-container .home-pai-container .right-container > div 
   width: 100%;
   object-fit: fill;
 }
+@media screen and (max-height: 763px) {
+  html body main .paiDeTodos-container .home-pai-container .right-container > div > img {
+    width: 70%;
+  }
+}
 @font-face {
   font-family: "sansationregular";
   src: url("./fontes/sansation-regular-webfont.woff") format("woff2");
