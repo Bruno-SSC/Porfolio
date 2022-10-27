@@ -308,6 +308,12 @@ html body main .paiDeTodos-container .project-pai-container .left-container .pro
   -webkit-text-stroke: 0.7px #F1A661;
   transform: rotate(-45deg);
 }
+html body main .paiDeTodos-container .project-pai-container .left-container .project-container > a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
 html body main .paiDeTodos-container .project-pai-container .left-container .project-container > iframe {
   position: absolute;
   top: 0;
