@@ -1,17 +1,22 @@
-<h1 align="center"> Portfólio 💻 </h1>
+<h1 align="center"> Sitefólio 💻 </h1>
+
+## Briefing 📄
 
 Meu portfólio profissional.
 
+> [Acessar](https://bruno-ssc.netlify.app)
 
-<h2 align="left"> Objetivos 📌 </h2>
+<h2 align="left"> Objetivo 📌 </h2>
 
 - Criar um local central de divulgação para o meu trabalho.
 
 ---
 
-<h3 align="center"> Main page 📷 </h3>
+<h3 align="center"> Home 📷 </h3>
 
-<div height="590em"><img src="./styles/images/showcase.png"></div>
+<div align="center">
+<img height="300em" src="./styles/images/showcase.png">
+</div>
 
 <h3 align="center"> Tecnologias utilizadas 🤖 </h3>
 
