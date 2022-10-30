@@ -7,11 +7,11 @@ export default function webJS() {
     const homeFrame = query('#homeFrame')
     const projectsFrame = query('#projectsFrame')
     const bioFrame = query('#bioFrame')
+    const miniAlert = query('#miniAlert')
     const bioBox = query('#bioBox')
     const contactBox = query('#contactBox')
     const referenceBox = query('#referenceBox')
     const conteudoBox = query('#conteudoBox').children
-
 
     //* SHOWING ALERT FRAME
     alertFrame.classList.add('moved-right')
@@ -56,7 +56,20 @@ export default function webJS() {
         frameCall(homeFrame)
     })
 
+    //? Mini alert animate
+
+    Array.from(queryAll('.option')).forEach(opt => {
+        opt.addEventListener('click', (e) => {
+            if(e.target.id == 'projetos') return
+            miniAlert.classList.add('minialert-show')
+            setTimeout(() => {
+                miniAlert.classList.remove('minialert-show')
+            }, 3000)
+        })
+    })
+
     //* FUNCTIONS
+
     function alertBTNs() {
         showOpt()
         frameAway(alertFrame)

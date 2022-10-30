@@ -1,59 +1,60 @@
 @use 'variables'
-
-.project-pai-container
-    display: flex
-    align-items: center
-    justify-content: center
-    .left-container
-        height: 70vh
-        width: 80vw
-        gap: 30px
-        overflow: scroll
-        display: flex
-        flex-wrap: wrap
-        -ms-overflow-style: none
-        scrollbar-width: none
-        .project-container
-            width: clamp(300px,500px,25vw)
-            height: 50%
-            background-color: #FFD8A9
-            border-left: 32px solid #F1A661
-            display: grid
-            place-items: center
-            position: relative
-            > span
-                color: #ffffff
-                font-size: 1.6em
-                font-weight: bold
-                -webkit-text-stroke: 0.7px #F1A661
-                transform: rotate(-45deg)
-            > a
-                position: absolute
-                height: 100%
-                width: 100%
-                cursor: pointer
-            > iframe
-                position: absolute
-                top: 0
-                left: 0
-                bottom: 0
-                right: 0
-                width: 400%
-                height: 400%
-                transform: scale(.25)
-                -moz-transform-origin: top left
-                -webkit-transform-origin: top left
-                -o-transform-origin: top left
-                -ms-transform-origin: top left
-                transform-origin: top left
-    .left-container::-webkit-scrollbar
-        display: none
-    .right-container
-        height: 70vh
-        width: 15vw
-        display: grid
-        place-items: center
-        > img
-            cursor: pointer
-            margin-right: 10%
-            width: max(100px,5vw)
+main
+    .paiDeTodos-container
+        .project-pai-container
+            display: flex
+            align-items: center
+            justify-content: center
+            .left-container
+                height: 70vh
+                width: 80vw
+                gap: 30px
+                overflow: scroll
+                display: flex
+                flex-wrap: wrap
+                -ms-overflow-style: none
+                scrollbar-width: none
+                .project-container
+                    width: clamp(300px,500px,25vw)
+                    height: 50%
+                    background-color: #FFD8A9
+                    border-left: 32px solid #F1A661
+                    display: grid
+                    place-items: center
+                    position: relative
+                    > span
+                        color: #ffffff
+                        font-size: 1.6em
+                        font-weight: bold
+                        -webkit-text-stroke: 0.7px #F1A661
+                        transform: rotate(-45deg)
+                    > a
+                        position: absolute
+                        height: 100%
+                        width: 100%
+                        cursor: pointer
+                    > iframe
+                        position: absolute
+                        top: 0
+                        left: 0
+                        bottom: 0
+                        right: 0
+                        width: 400%
+                        height: 400%
+                        transform: scale(.25)
+                        -moz-transform-origin: top left
+                        -webkit-transform-origin: top left
+                        -o-transform-origin: top left
+                        -ms-transform-origin: top left
+                        transform-origin: top left
+            .left-container::-webkit-scrollbar
+                display: none
+            .right-container
+                height: 70vh
+                width: 15vw
+                display: grid
+                place-items: center
+                > img
+                    cursor: pointer
+                    margin-right: 10%
+                    width: max(100px,5vw)

@@ -1,71 +1,8 @@
-@use 'variables'
-
-html
-    width: 100vw
-    height: 100vh
-    *
-        margin: 0
-        padding: 0
-        text-decoration: none
-        list-style: none
-        box-sizing: border-box
-        text-decoration: none
-    body
-        font-family: sansationregular
-        background-color: variables.$main-color
-        overflow: hidden
-        header
-            height: 10vh
-            width: 100vw
-            .menu-container
-                display: grid
-                place-items: center
-                .menu
-                    display: flex
-                    justify-content: space-around
-                    align-items: center
-                    width: 80vw
-                    height: 10vh
-                    li
-                        > a
-                            color: rgba(255, 255, 255, .0)
-                            font-size: calc(1vw + 1vh)
-                            transition: color 3s ease
-                        > .show
-                            color: rgba(255, 255, 255, .7)
-        main
-            height: 80vh
-            width: 100vw
-            .paiDeTodos-container
-                position: relative
-                display: flex
-                height: 80vh
-                width: 100vw
-                > div
-                    height: 80vh
-                    width: 100vw
-                    border-radius: 50px
-                    background-color: rgba(254, 254, 254, .9)
-                    position: absolute
-                    right: -100vw
-                    top: 0px
-                    transition: right 3s, top 0s 3s
-                @import 'alert'
-                @import 'home'
-                @import 'projects'
-                @import 'bio'
-                > .moved-left
-                    right: 100vw
-                    top: -100vh
-                > .moved-right
-                    right: 0px
-        footer
-            display: grid
-            place-items: center
-            height: 10vh
-            width: 100vw
-            .copyright-container
-                color: rgba(255, 255, 255, .7)
-                display: grid
-                place-items: center
-                font-size: calc( 1vw + 1vh )
+@use 'default'
+@use 'navbar'
+@use 'pai-de-todos'
+@use 'alert'
+@use 'home'
+@use 'projects'
+@use 'bio'
+@use 'popup'

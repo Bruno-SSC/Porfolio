@@ -1,0 +1,17 @@
+header
+    .menu-container
+        display: grid
+        place-items: center
+        .menu
+            display: flex
+            justify-content: space-around
+            align-items: center
+            width: 80vw
+            height: 10vh
+            li
+                > a
+                    color: rgba(255, 255, 255, .0)
+                    font-size: calc(1vw + 1vh)
+                    transition: color 3s ease
+                > .show
+                    color: rgba(255, 255, 255, .7)

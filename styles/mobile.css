@@ -13,11 +13,11 @@ html * {
 }
 html body {
   font-family: sansationregular;
-  overflow-x: hidden;
   background-color: #F1A661;
 }
 html body main {
   width: 100vw;
+  overflow-x: hidden;
 }
 html body main .paiDeTodos-container {
   border-top-left-radius: 100px;
@@ -31,58 +31,85 @@ html body main .paiDeTodos-container {
 html body main .paiDeTodos-container > div {
   max-width: 80vw;
 }
-html body main .paiDeTodos-container .home-container {
+html body footer {
+  display: grid;
+  place-items: center;
+}
+html body footer .copyright-container {
+  color: rgba(255, 255, 255, 0.7);
+  display: grid;
+  place-items: center;
+  height: 10vh;
+}
+
+main .paiDeTodos-container .home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 100px;
 }
-html body main .paiDeTodos-container .home-container h1 {
+main .paiDeTodos-container .home-container h1 {
   text-align: center;
   text-shadow: 7px 5px 3px rgba(0, 0, 0, 0.25);
 }
-html body main .paiDeTodos-container .home-container img {
+main .paiDeTodos-container .home-container img {
   width: max(40vh, 60vw);
 }
-html body main .paiDeTodos-container .links-container h1 {
+
+main .paiDeTodos-container .links-container h1 {
   text-align: center;
   margin-bottom: 15px;
   text-shadow: 7px 5px 3px rgba(0, 0, 0, 0.25);
 }
-html body main .paiDeTodos-container .links-container .btns-container {
+main .paiDeTodos-container .links-container .btns-container {
   display: flex;
   flex-direction: column;
   gap: 65px;
   margin-top: 65px;
   /* adicionar um efeito nos botões ao clicar */
 }
-html body main .paiDeTodos-container .links-container .btns-container > div {
+main .paiDeTodos-container .links-container .btns-container > div {
   background-color: #F7CAA0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 10px;
 }
-html body main .paiDeTodos-container .links-container .btns-container > div > h2 {
+main .paiDeTodos-container .links-container .btns-container > div a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main .paiDeTodos-container .links-container .btns-container > div a > h2 {
   margin-left: 15%;
   font-weight: 400;
   color: white;
   -webkit-text-stroke: 0.9px #F1A661;
 }
-html body main .paiDeTodos-container .links-container .btns-container > div > div {
+main .paiDeTodos-container .links-container .btns-container > div a > div {
   height: max(10vh, 15vw);
   width: max(10vh, 15vw);
 }
-html body main .paiDeTodos-container .links-container .btns-container > div > div > img {
+main .paiDeTodos-container .links-container .btns-container > div a > div > img {
   width: 100%;
   height: 100%;
   object-fit: fill;
 }
-html body main .paiDeTodos-container .projects-container h1 {
+
+:root {
+  --rowPos: 0vw;
+}
+
+main .paiDeTodos-container .projects-container h1 {
   text-align: center;
   text-shadow: 7px 5px 3px rgba(0, 0, 0, 0.25);
 }
-html body main .paiDeTodos-container .projects-container .project-itself {
+main .paiDeTodos-container .projects-container .project-row {
+  display: flex;
+  gap: 10vw;
+  width: fit-content;
+  position: relative;
+  left: var(--rowPos);
+  transition: all 0.5s ease-in-out;
+}
+main .paiDeTodos-container .projects-container .project-row .project-itself {
   margin-top: 30px;
   width: 80vw;
   height: 50vw;
@@ -91,29 +118,52 @@ html body main .paiDeTodos-container .projects-container .project-itself {
   place-items: center;
   border-left: 10px solid #F1A661;
   border-right: 10px solid #F1A661;
+  position: relative;
 }
-html body main .paiDeTodos-container .projects-container .project-itself > span {
+main .paiDeTodos-container .projects-container .project-row .project-itself > span {
   transform: rotate(-35deg);
   font-size: 2.4em;
   color: white;
   -webkit-text-stroke: 1.9px #F1A661;
 }
-html body main .paiDeTodos-container .bio-container {
+main .paiDeTodos-container .projects-container .project-row .project-itself > a {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+main .paiDeTodos-container .projects-container .project-row .project-itself > iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 400%;
+  height: 400%;
+  transform: scale(0.25);
+  -moz-transform-origin: top left;
+  -webkit-transform-origin: top left;
+  -o-transform-origin: top left;
+  -ms-transform-origin: top left;
+  transform-origin: top left;
+}
+
+main .paiDeTodos-container .bio-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-html body main .paiDeTodos-container .bio-container > h1 {
+main .paiDeTodos-container .bio-container > h1 {
   margin-bottom: 30px;
   text-align: center;
   text-shadow: 7px 5px 3px rgba(0, 0, 0, 0.25);
 }
-html body main .paiDeTodos-container .bio-container .btns-container {
+main .paiDeTodos-container .bio-container .btns-container {
   display: flex;
   height: calc(10vh + 3vw);
   font-weight: bold;
 }
-html body main .paiDeTodos-container .bio-container .btns-container > div {
+main .paiDeTodos-container .bio-container .btns-container > div {
   display: grid;
   place-items: center;
   background-color: #F7CAA0;
@@ -124,18 +174,18 @@ html body main .paiDeTodos-container .bio-container .btns-container > div {
   font-weight: 500;
   border: 1px solid black;
 }
-html body main .paiDeTodos-container .bio-container .btns-container .references-btn {
+main .paiDeTodos-container .bio-container .btns-container .references-btn {
   border-top-left-radius: 30px;
   border-width: 2px 0 0 2px;
 }
-html body main .paiDeTodos-container .bio-container .btns-container .contactMe-btn {
+main .paiDeTodos-container .bio-container .btns-container .contactMe-btn {
   border-top-right-radius: 30px;
   border-width: 2px 2px 0 0;
 }
-html body main .paiDeTodos-container .bio-container .btns-container .bio-btn {
+main .paiDeTodos-container .bio-container .btns-container .bio-btn {
   border-width: 2px 0 0 0;
 }
-html body main .paiDeTodos-container .bio-container .conteudo-container {
+main .paiDeTodos-container .bio-container .conteudo-container {
   position: relative;
   height: 60vh;
   width: 80vw;
@@ -145,7 +195,7 @@ html body main .paiDeTodos-container .bio-container .conteudo-container {
   border: 2px solid black;
   transform-style: preserve-3d;
 }
-html body main .paiDeTodos-container .bio-container .conteudo-container > div {
+main .paiDeTodos-container .bio-container .conteudo-container > div {
   margin: 0 10px;
   margin-top: 10px;
   font-weight: 300;
@@ -153,18 +203,18 @@ html body main .paiDeTodos-container .bio-container .conteudo-container > div {
   font-size: 1.2em;
   line-height: 1.5em;
 }
-html body main .paiDeTodos-container .bio-container .conteudo-container .contacMe-container {
+main .paiDeTodos-container .bio-container .conteudo-container .contacMe-container {
   visibility: hidden;
   position: absolute;
   transform: rotateX(90deg);
   transition: transform 1.5s, visibility 0s;
   color: rgba(0, 0, 0, 0.9);
 }
-html body main .paiDeTodos-container .bio-container .conteudo-container .contacMe-container > ul li {
+main .paiDeTodos-container .bio-container .conteudo-container .contacMe-container > ul li {
   list-style: disc;
   margin: 40px;
 }
-html body main .paiDeTodos-container .bio-container .conteudo-container .bio-box-container {
+main .paiDeTodos-container .bio-container .conteudo-container .bio-box-container {
   visibility: hidden;
   position: absolute;
   transform: rotateX(90deg);
@@ -173,39 +223,41 @@ html body main .paiDeTodos-container .bio-container .conteudo-container .bio-box
   text-align: justify;
   font-size: 1.5em;
 }
-html body main .paiDeTodos-container .bio-container .conteudo-container .references-container {
+main .paiDeTodos-container .bio-container .conteudo-container .references-container {
   visibility: hidden;
   position: absolute;
   transform: rotateX(90deg);
   transition: transform 1.5s, visibility 0s;
 }
-html body main .paiDeTodos-container .bio-container .conteudo-container .references-container > ul li {
+main .paiDeTodos-container .bio-container .conteudo-container .references-container > ul li {
   list-style: disc;
   margin: 40px;
 }
-html body main .paiDeTodos-container .bio-container .conteudo-container .references-container > ul li a {
+main .paiDeTodos-container .bio-container .conteudo-container .references-container > ul li a {
   display: block;
   font-size: 1.5em;
   color: rgba(0, 0, 0, 0.9);
 }
-html body main .paiDeTodos-container .bio-container .conteudo-container > .show {
+main .paiDeTodos-container .bio-container .conteudo-container > .show {
   visibility: visible;
   transform: rotateX(0deg);
 }
-html body main .paiDeTodos-container .goodbye-container {
+
+main .paiDeTodos-container .goodbye-container {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10vw;
 }
-html body main .paiDeTodos-container .goodbye-container > span {
+main .paiDeTodos-container .goodbye-container > span {
   font-size: max(3vh + 0px, 5vw + 0px);
   font-weight: bold;
 }
-html body main .paiDeTodos-container .goodbye-container > img {
+main .paiDeTodos-container .goodbye-container > img {
   width: max(10vh, 20vw);
 }
-html body main .alert-pai-container {
+
+main .alert-pai-container {
   height: 100vh;
   width: 100vw;
   border-radius: 100px;
@@ -216,28 +268,28 @@ html body main .alert-pai-container {
   align-items: center;
   gap: 10vh;
 }
-html body main .alert-pai-container .up-container {
+main .alert-pai-container .up-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 30vh;
 }
-html body main .alert-pai-container .up-container span {
+main .alert-pai-container .up-container span {
   font-size: 3vh;
   font-weight: 800;
   margin-top: 10px;
   text-align: center;
 }
-html body main .alert-pai-container .up-container img {
+main .alert-pai-container .up-container img {
   width: 30vh;
 }
-html body main .alert-pai-container .botoes-container {
+main .alert-pai-container .botoes-container {
   /* adicionar efeito nos botões ao clicar */
   display: flex;
   flex-direction: column;
   gap: 2vh;
 }
-html body main .alert-pai-container .botoes-container > div {
+main .alert-pai-container .botoes-container > div {
   background-color: #F1A661;
   padding: 3vh;
   border-radius: 40px;
@@ -245,16 +297,6 @@ html body main .alert-pai-container .botoes-container > div {
   text-transform: uppercase;
   display: grid;
   place-items: center;
-}
-html body footer {
-  display: grid;
-  place-items: center;
-}
-html body footer .copyright-container {
-  color: rgba(255, 255, 255, 0.7);
-  display: grid;
-  place-items: center;
-  height: 10vh;
 }
 
 /*# sourceMappingURL=mobile.css.map */

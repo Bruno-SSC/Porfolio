@@ -1,0 +1,32 @@
+@use 'variables'
+
+html
+    width: 100vw
+    height: 100vh
+    *
+        margin: 0
+        padding: 0
+        text-decoration: none
+        list-style: none
+        box-sizing: border-box
+        text-decoration: none
+    body
+        font-family: sansationregular
+        background-color: variables.$main-color
+        overflow: hidden
+        header
+            height: 10vh
+            width: 100vw
+        main
+            height: 80vh
+            width: 100vw
+        footer
+            display: grid
+            place-items: center
+            height: 10vh
+            width: 100vw
+            .copyright-container
+                color: rgba(255, 255, 255, .7)
+                display: grid
+                place-items: center
+                font-size: calc( 1vw + 1vh )

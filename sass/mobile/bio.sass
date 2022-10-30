@@ -1,78 +1,82 @@
-.bio-container
-    display: flex
-    flex-direction: column
-    align-items: center
-    > h1
-        margin-bottom: 30px
-        text-align: center
-        @include mixins.text-shadow
-    .btns-container
-        display: flex
-        height: calc(10vh + 3vw)
-        font-weight: bold
-        > div
-            display: grid
-            place-items: center
-            background-color: #F7CAA0
-            width: calc( 80vw/3 )
-            color: white
-            -webkit-text-stroke: .9px #F1A661
-            font-size: max(2vh + 0px, 3vw + 0px)
-            font-weight: 500
-            border: 1px solid black
-        .references-btn
-            border-top-left-radius: 30px
-            border-width: 2px 0 0 2px
-        .contactMe-btn
-            border-top-right-radius: 30px
-            border-width: 2px 2px 0 0
-        .bio-btn
-            border-width: 2px 0 0 0
-    .conteudo-container
-        position: relative
-        height: 60vh
-        width: 80vw
-        overflow-y: scroll
-        border-radius: 0px 0px 30px 30px
-        background-color: rgba(0, 0, 0, .14)
-        border: 2px solid black
-        transform-style: preserve-3d
-        > div
-            margin: 0 10px
-            margin-top: 10px
-            font-weight: 300
-            line-height: 1.5em
-            font-size: 1.2em
-            line-height: 1.5em
-        .contacMe-container
-            visibility: hidden
-            position: absolute
-            transform: rotateX(90deg)
-            transition: transform 1.5s, visibility 0s
-            color: rgba(0, 0, 0, .9)
-            > ul li
-                list-style: disc
-                margin: 40px
-        .bio-box-container
-            visibility: hidden
-            position: absolute
-            transform: rotateX(90deg)
-            color: rgba(0, 0, 0, .9)
-            transition: transform 1.5s, visibility 0s
-            text-align: justify
-            font-size: 1.5em
-        .references-container
-            visibility: hidden
-            position: absolute
-            transform: rotateX(90deg)
-            transition: transform 1.5s, visibility 0s
-            > ul li
-                list-style: disc
-                margin: 40px
-                a
-                    display: block
-                    font-size: 1.5em
+@use 'variables'
+@use 'mixins'
+main
+    .paiDeTodos-container
+        .bio-container
+            display: flex
+            flex-direction: column
+            align-items: center
+            > h1
+                margin-bottom: 30px
+                text-align: center
+                @include mixins.text-shadow
+            .btns-container
+                display: flex
+                height: calc(10vh + 3vw)
+                font-weight: bold
+                > div
+                    display: grid
+                    place-items: center
+                    background-color: #F7CAA0
+                    width: calc( 80vw/3 )
+                    color: white
+                    -webkit-text-stroke: .9px #F1A661
+                    font-size: max(2vh + 0px, 3vw + 0px)
+                    font-weight: 500
+                    border: 1px solid black
+                .references-btn
+                    border-top-left-radius: 30px
+                    border-width: 2px 0 0 2px
+                .contactMe-btn
+                    border-top-right-radius: 30px
+                    border-width: 2px 2px 0 0
+                .bio-btn
+                    border-width: 2px 0 0 0
+            .conteudo-container
+                position: relative
+                height: 60vh
+                width: 80vw
+                overflow-y: scroll
+                border-radius: 0px 0px 30px 30px
+                background-color: rgba(0, 0, 0, .14)
+                border: 2px solid black
+                transform-style: preserve-3d
+                > div
+                    margin: 0 10px
+                    margin-top: 10px
+                    font-weight: 300
+                    line-height: 1.5em
+                    font-size: 1.2em
+                    line-height: 1.5em
+                .contacMe-container
+                    visibility: hidden
+                    position: absolute
+                    transform: rotateX(90deg)
+                    transition: transform 1.5s, visibility 0s
                     color: rgba(0, 0, 0, .9)
-        > .show
-            visibility: visible
-            transform: rotateX(0deg)
+                    > ul li
+                        list-style: disc
+                        margin: 40px
+                .bio-box-container
+                    visibility: hidden
+                    position: absolute
+                    transform: rotateX(90deg)
+                    color: rgba(0, 0, 0, .9)
+                    transition: transform 1.5s, visibility 0s
+                    text-align: justify
+                    font-size: 1.5em
+                .references-container
+                    visibility: hidden
+                    position: absolute
+                    transform: rotateX(90deg)
+                    transition: transform 1.5s, visibility 0s
+                    > ul li
+                        list-style: disc
+                        margin: 40px
+                        a
+                            display: block
+                            font-size: 1.5em
+                            color: rgba(0, 0, 0, .9)
+                > .show
+                    visibility: visible
+                    transform: rotateX(0deg)

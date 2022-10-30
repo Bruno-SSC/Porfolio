@@ -1,18 +1,51 @@
-.projects-container
-    h1
-        text-align: center
-        @include mixins.text-shadow
-    .project-itself
-        margin-top: 30px
-        width: 80vw
-        height: 50vw
-        background-color: #F7CAA0
-        display: grid
-        place-items: center
-        border-left: 10px solid #F1A661
-        border-right: 10px solid #F1A661
-        > span
-            transform: rotate(-35deg)
-            font-size: 2.4em
-            color: white
-            -webkit-text-stroke: 1.9px #F1A661
+@use 'variables'
+@use 'mixins'
+:root
+    --rowPos: 0vw
+main
+    .paiDeTodos-container
+        .projects-container
+            h1
+                text-align: center
+                @include mixins.text-shadow
+            .project-row
+                display: flex
+                gap: 10vw
+                width: fit-content
+                position: relative
+                left: var(--rowPos)
+                transition: all 0.5s ease-in-out
+                .project-itself
+                    margin-top: 30px
+                    width: 80vw
+                    height: 50vw
+                    background-color: #F7CAA0
+                    display: grid
+                    place-items: center
+                    border-left: 10px solid #F1A661
+                    border-right: 10px solid #F1A661
+                    position: relative
+                    > span
+                        transform: rotate(-35deg)
+                        font-size: 2.4em
+                        color: white
+                        -webkit-text-stroke: 1.9px #F1A661
+                    > a
+                        position: absolute
+                        height: 100%
+                        width: 100%
+                        cursor: pointer
+                    > iframe
+                        position: absolute
+                        top: 0
+                        left: 0
+                        bottom: 0
+                        right: 0
+                        width: 400%
+                        height: 400%
+                        transform: scale(.25)
+                        -moz-transform-origin: top left
+                        -webkit-transform-origin: top left
+                        -o-transform-origin: top left
+                        -ms-transform-origin: top left
+                        transform-origin: top left

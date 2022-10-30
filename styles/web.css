@@ -55,36 +55,50 @@ html body header {
   height: 10vh;
   width: 100vw;
 }
-html body header .menu-container {
+html body main {
+  height: 80vh;
+  width: 100vw;
+}
+html body footer {
+  display: grid;
+  place-items: center;
+  height: 10vh;
+  width: 100vw;
+}
+html body footer .copyright-container {
+  color: rgba(255, 255, 255, 0.7);
+  display: grid;
+  place-items: center;
+  font-size: calc(1vw + 1vh);
+}
+
+header .menu-container {
   display: grid;
   place-items: center;
 }
-html body header .menu-container .menu {
+header .menu-container .menu {
   display: flex;
   justify-content: space-around;
   align-items: center;
   width: 80vw;
   height: 10vh;
 }
-html body header .menu-container .menu li > a {
+header .menu-container .menu li > a {
   color: rgba(255, 255, 255, 0);
   font-size: calc(1vw + 1vh);
   transition: color 3s ease;
 }
-html body header .menu-container .menu li > .show {
+header .menu-container .menu li > .show {
   color: rgba(255, 255, 255, 0.7);
 }
-html body main {
-  height: 80vh;
-  width: 100vw;
-}
-html body main .paiDeTodos-container {
+
+main .paiDeTodos-container {
   position: relative;
   display: flex;
   height: 80vh;
   width: 100vw;
 }
-html body main .paiDeTodos-container > div {
+main .paiDeTodos-container > div {
   height: 80vh;
   width: 100vw;
   border-radius: 50px;
@@ -94,43 +108,15 @@ html body main .paiDeTodos-container > div {
   top: 0px;
   transition: right 3s, top 0s 3s;
 }
-@font-face {
-  font-family: "sansationregular";
-  src: url("./fontes/sansation-regular-webfont.woff") format("woff2");
-  font-weight: normal;
-  font-style: normal;
+main .paiDeTodos-container > .moved-left {
+  right: 100vw;
+  top: -100vh;
 }
-@font-face {
-  font-family: "sansationbold";
-  src: url("./sansation-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
+main .paiDeTodos-container > .moved-right {
+  right: 0;
 }
-@font-face {
-  font-family: "sansationbold_italic";
-  src: url("./sansation-bolditalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansationitalic";
-  src: url("./sansation-italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansation_lightlight";
-  src: url("./sansation-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansation_lightlight_italic";
-  src: url("./sansation-lightitalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-html body main .paiDeTodos-container .alert-pai-container {
+
+main .alert-pai-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -138,19 +124,19 @@ html body main .paiDeTodos-container .alert-pai-container {
   background-color: rgba(255, 255, 255, 0.4);
   gap: 40px;
 }
-html body main .paiDeTodos-container .alert-pai-container h1 {
+main .alert-pai-container h1 {
   font-size: max(2vw, 2vh);
   font-weight: bold;
   margin-top: 20px;
 }
-html body main .paiDeTodos-container .alert-pai-container img {
+main .alert-pai-container img {
   width: max(15vw, 15vh);
 }
-html body main .paiDeTodos-container .alert-pai-container .botoes-container {
+main .alert-pai-container .botoes-container {
   display: flex;
   gap: 40px;
 }
-html body main .paiDeTodos-container .alert-pai-container .botoes-container > div {
+main .alert-pai-container .botoes-container > div {
   background-color: #F1A661;
   padding: max(1.8vw, 1.8vh) max(3vw, 3vh) max(1.8vw, 1.8vh) max(3vw, 3vh);
   border-radius: 40px;
@@ -158,46 +144,11 @@ html body main .paiDeTodos-container .alert-pai-container .botoes-container > di
   font-weight: bold;
   cursor: pointer;
 }
-@font-face {
-  font-family: "sansationregular";
-  src: url("./fontes/sansation-regular-webfont.woff") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansationbold";
-  src: url("./sansation-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansationbold_italic";
-  src: url("./sansation-bolditalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansationitalic";
-  src: url("./sansation-italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansation_lightlight";
-  src: url("./sansation-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansation_lightlight_italic";
-  src: url("./sansation-lightitalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-html body main .paiDeTodos-container .home-pai-container {
+
+main .paiDeTodos-container .home-pai-container {
   display: flex;
 }
-html body main .paiDeTodos-container .home-pai-container .left-container {
+main .paiDeTodos-container .home-pai-container .left-container {
   width: 50vw;
   height: 80vh;
   display: flex;
@@ -207,82 +158,48 @@ html body main .paiDeTodos-container .home-pai-container .left-container {
   font-size: calc(0.5vw + 1vh);
   gap: 20px;
 }
-html body main .paiDeTodos-container .home-pai-container .left-container .socials-container {
+main .paiDeTodos-container .home-pai-container .left-container .socials-container {
   display: flex;
-  justify-content: center;
   gap: 10px;
+  justify-content: center;
+  width: 30%;
 }
-html body main .paiDeTodos-container .home-pai-container .left-container .socials-container > img {
-  width: 10%;
+main .paiDeTodos-container .home-pai-container .left-container .socials-container > a img {
+  width: 100%;
   cursor: pointer;
 }
-html body main .paiDeTodos-container .home-pai-container .left-container > span {
+main .paiDeTodos-container .home-pai-container .left-container > span {
   font-weight: bold;
 }
-html body main .paiDeTodos-container .home-pai-container .left-container > h1 {
+main .paiDeTodos-container .home-pai-container .left-container > h1 {
   text-align: center;
   width: 10em;
 }
-html body main .paiDeTodos-container .home-pai-container .right-container {
+main .paiDeTodos-container .home-pai-container .right-container {
   width: 50vw;
   height: 80vh;
   display: grid;
   place-items: center;
 }
-html body main .paiDeTodos-container .home-pai-container .right-container > div {
+main .paiDeTodos-container .home-pai-container .right-container > div {
   width: clamp(500px, 30vw, 700px);
 }
-html body main .paiDeTodos-container .home-pai-container .right-container > div > img {
+main .paiDeTodos-container .home-pai-container .right-container > div > img {
   width: 100%;
   object-fit: fill;
 }
 @media screen and (max-height: 763px) {
-  html body main .paiDeTodos-container .home-pai-container .right-container > div > img {
+  main .paiDeTodos-container .home-pai-container .right-container > div > img {
     width: 70%;
   }
 }
-@font-face {
-  font-family: "sansationregular";
-  src: url("./fontes/sansation-regular-webfont.woff") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansationbold";
-  src: url("./sansation-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansationbold_italic";
-  src: url("./sansation-bolditalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansationitalic";
-  src: url("./sansation-italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansation_lightlight";
-  src: url("./sansation-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansation_lightlight_italic";
-  src: url("./sansation-lightitalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-html body main .paiDeTodos-container .project-pai-container {
+
+main .paiDeTodos-container .project-pai-container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-html body main .paiDeTodos-container .project-pai-container .left-container {
+main .paiDeTodos-container .project-pai-container .left-container {
   height: 70vh;
   width: 80vw;
   gap: 30px;
@@ -292,7 +209,7 @@ html body main .paiDeTodos-container .project-pai-container .left-container {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-html body main .paiDeTodos-container .project-pai-container .left-container .project-container {
+main .paiDeTodos-container .project-pai-container .left-container .project-container {
   width: clamp(300px, 500px, 25vw);
   height: 50%;
   background-color: #FFD8A9;
@@ -301,20 +218,20 @@ html body main .paiDeTodos-container .project-pai-container .left-container .pro
   place-items: center;
   position: relative;
 }
-html body main .paiDeTodos-container .project-pai-container .left-container .project-container > span {
+main .paiDeTodos-container .project-pai-container .left-container .project-container > span {
   color: #ffffff;
   font-size: 1.6em;
   font-weight: bold;
   -webkit-text-stroke: 0.7px #F1A661;
   transform: rotate(-45deg);
 }
-html body main .paiDeTodos-container .project-pai-container .left-container .project-container > a {
+main .paiDeTodos-container .project-pai-container .left-container .project-container > a {
   position: absolute;
   height: 100%;
   width: 100%;
   cursor: pointer;
 }
-html body main .paiDeTodos-container .project-pai-container .left-container .project-container > iframe {
+main .paiDeTodos-container .project-pai-container .left-container .project-container > iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -329,71 +246,36 @@ html body main .paiDeTodos-container .project-pai-container .left-container .pro
   -ms-transform-origin: top left;
   transform-origin: top left;
 }
-html body main .paiDeTodos-container .project-pai-container .left-container::-webkit-scrollbar {
+main .paiDeTodos-container .project-pai-container .left-container::-webkit-scrollbar {
   display: none;
 }
-html body main .paiDeTodos-container .project-pai-container .right-container {
+main .paiDeTodos-container .project-pai-container .right-container {
   height: 70vh;
   width: 15vw;
   display: grid;
   place-items: center;
 }
-html body main .paiDeTodos-container .project-pai-container .right-container > img {
+main .paiDeTodos-container .project-pai-container .right-container > img {
   cursor: pointer;
   margin-right: 10%;
   width: max(100px, 5vw);
 }
-@font-face {
-  font-family: "sansationregular";
-  src: url("./fontes/sansation-regular-webfont.woff") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansationbold";
-  src: url("./sansation-bold-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansationbold_italic";
-  src: url("./sansation-bolditalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansationitalic";
-  src: url("./sansation-italic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansation_lightlight";
-  src: url("./sansation-light-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: "sansation_lightlight_italic";
-  src: url("./sansation-lightitalic-webfont.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-html body main .paiDeTodos-container .bio-pai-container .up-container {
+
+main .paiDeTodos-container .bio-pai-container .up-container {
   height: 65vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container {
   width: 85vw;
   height: 65vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container {
   background-color: #FFD8A9;
   display: flex;
   align-items: center;
@@ -402,10 +284,10 @@ html body main .paiDeTodos-container .bio-pai-container .up-container .left-cont
   border-radius: 30px;
   margin-right: 90px;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container {
   height: 100%;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container > div {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container > div {
   background-color: #F1A661;
   cursor: pointer;
   font-size: calc(0.5vh + 1vw);
@@ -416,19 +298,19 @@ html body main .paiDeTodos-container .bio-pai-container .up-container .left-cont
   place-items: center;
   padding: 0 2vw 0 2vw;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container > #contactMeBTN {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container > #contactMeBTN {
   border-top-left-radius: 30px;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container > #referencesBTN {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container > #referencesBTN {
   border-bottom-left-radius: 30px;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container::-webkit-scrollbar {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .botoes-container::-webkit-scrollbar {
   display: none;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container::-webkit-scrollbar {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container::-webkit-scrollbar {
   display: none;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container {
   position: relative;
   text-align: left;
   width: 100%;
@@ -438,19 +320,19 @@ html body main .paiDeTodos-container .bio-pai-container .up-container .left-cont
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .contacMe-container {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .contacMe-container {
   visibility: hidden;
   position: absolute;
   transform: rotateX(90deg);
   transition: transform 1.5s, visibility 0s;
   color: rgba(0, 0, 0, 0.9);
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .contacMe-container > ul li {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .contacMe-container > ul li {
   list-style: disc;
   font-size: calc(1vw + 1vh);
   margin: 40px;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .bio-container {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .bio-container {
   visibility: hidden;
   position: absolute;
   transform: rotateX(90deg);
@@ -459,40 +341,40 @@ html body main .paiDeTodos-container .bio-pai-container .up-container .left-cont
   margin-top: 1vw;
   color: rgba(0, 0, 0, 0.9);
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .bio-container > span {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .bio-container > span {
   font-size: calc(1vw + 1vh);
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .references-container {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .references-container {
   visibility: hidden;
   position: absolute;
   transform: rotateX(90deg);
   transition: transform 1.5s, visibility 0s;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .references-container > ul li {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .references-container > ul li {
   list-style: disc;
   font-size: calc(1vw + 1vh);
   margin: 40px;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .references-container > ul li a {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container .references-container > ul li a {
   display: block;
   font-size: calc(1vw + 1vh);
   color: rgba(0, 0, 0, 0.9);
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container > .show {
+main .paiDeTodos-container .bio-pai-container .up-container .left-container .caixa-bio-container .conteudo-container > .show {
   visibility: visible;
   transform: rotateX(0deg);
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .right-container {
+main .paiDeTodos-container .bio-pai-container .up-container .right-container {
   width: 15vw;
   height: 65vh;
   display: grid;
   place-items: center;
 }
-html body main .paiDeTodos-container .bio-pai-container .up-container .right-container > img {
+main .paiDeTodos-container .bio-pai-container .up-container .right-container > img {
   cursor: pointer;
   width: max(100px, 3vw);
 }
-html body main .paiDeTodos-container .bio-pai-container .down-container {
+main .paiDeTodos-container .bio-pai-container .down-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -500,28 +382,35 @@ html body main .paiDeTodos-container .bio-pai-container .down-container {
   height: 15vh;
   font-size: calc(1vw + 1vh);
 }
-html body main .paiDeTodos-container .bio-pai-container .down-container > img {
+main .paiDeTodos-container .bio-pai-container .down-container > img {
   width: max(150px, 10vw);
   margin-bottom: 30px;
 }
-html body main .paiDeTodos-container > .moved-left {
-  right: 100vw;
-  top: -100vh;
+
+main .paiDeTodos-container .popUp-alert-container {
+  background-color: rgba(0, 0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+  width: 20vw;
+  transition: right 1s;
+  top: 70%;
 }
-html body main .paiDeTodos-container > .moved-right {
-  right: 0px;
+main .paiDeTodos-container .popUp-alert-container > img {
+  object-fit: fill;
+  height: 100%;
 }
-html body footer {
-  display: grid;
-  place-items: center;
-  height: 10vh;
-  width: 100vw;
+main .paiDeTodos-container .popUp-alert-container .text {
+  text-align: center;
+  color: black;
+  font-size: 3vh;
+  width: 80%;
+  font-weight: bolder;
 }
-html body footer .copyright-container {
-  color: rgba(255, 255, 255, 0.7);
-  display: grid;
-  place-items: center;
-  font-size: calc(1vw + 1vh);
+main .paiDeTodos-container .minialert-show {
+  right: 0;
 }
 
 /*# sourceMappingURL=web.css.map */
