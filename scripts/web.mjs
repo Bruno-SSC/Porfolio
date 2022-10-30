@@ -27,9 +27,24 @@ export default function webJS() {
         hideOpt()
         frameAway(homeFrame)
         frameCall(projectsFrame)
+        setTimeout(showIframes, 3000);
     })
 
     //? projects frame
+
+    //* variables
+
+    const iframesSrc = [
+        "https://infinity-gym.netlify.app",
+        "https://xurasco.netlify.app",
+        "https://spoty-siteclone.netlify.app", "https://tetrack.netlify.app",
+        "https://luck-num.netlify.app", "https://key-gen.netlify.app",
+        "https://astron-login.netlify.app", "https://disc-bot.netlify.app"]
+
+
+
+
+
     const nextBTN = query('#nextBTN').addEventListener('click', () => {
         frameAway(projectsFrame)
         frameCall(bioFrame)
@@ -60,11 +75,11 @@ export default function webJS() {
 
     Array.from(queryAll('.option')).forEach(opt => {
         opt.addEventListener('click', (e) => {
-            if(e.target.id == 'projetos') return
+            if (e.target.id == 'projetos') return
             miniAlert.classList.add('minialert-show')
             setTimeout(() => {
                 miniAlert.classList.remove('minialert-show')
-            }, 3000)
+            }, 500)
         })
     })
 
@@ -102,5 +117,12 @@ export default function webJS() {
 
     function cleanConteudoBox() {
         Array.from(conteudoBox).map(child => { child.classList.remove('show') })
+    }
+
+    function showIframes() {
+        Array.from(queryAll('iframe')).map(each => {
+            if (each.src != "") return
+            each.src = iframesSrc.shift()
+        })
     }
 }
