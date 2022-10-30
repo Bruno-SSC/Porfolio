@@ -27,7 +27,6 @@ export default function webJS() {
         hideOpt()
         frameAway(homeFrame)
         frameCall(projectsFrame)
-        setTimeout(showIframes, 3000);
     })
 
     //? projects frame
@@ -42,7 +41,11 @@ export default function webJS() {
         "https://astron-login.netlify.app", "https://disc-bot.netlify.app"]
 
 
-
+    Array.from(queryAll('.project-container')).forEach(each => {
+        each.addEventListener('mouseover', (e) => {
+            showIframe(e.target)
+        })
+    })
 
 
     const nextBTN = query('#nextBTN').addEventListener('click', () => {
@@ -79,7 +82,7 @@ export default function webJS() {
             miniAlert.classList.add('minialert-show')
             setTimeout(() => {
                 miniAlert.classList.remove('minialert-show')
-            }, 500)
+            }, 2000)
         })
     })
 
@@ -119,10 +122,14 @@ export default function webJS() {
         Array.from(conteudoBox).map(child => { child.classList.remove('show') })
     }
 
-    function showIframes() {
-        Array.from(queryAll('iframe')).map(each => {
-            if (each.src != "") return
-            each.src = iframesSrc.shift()
-        })
+    function showIframe(target) {
+        let iframe = target.parentElement.children[1]
+        let aHref = target.parentElement.children[2]
+
+        if (iframe.src != '') return
+        
+        let src = iframesSrc.shift()
+        iframe.src = src
+        aHref.href = src
     }
 }
