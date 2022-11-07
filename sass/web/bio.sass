@@ -2,26 +2,21 @@
 main
     .paiDeTodos-container
         .bio-pai-container
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-around
             .up-container
-                height: 65vh
-                width: 100vw
-                display: flex
-                justify-content: center
-                align-items: center
-                .left-container
-                    width: 85vw
-                    height: 65vh
+                    height: 60vh
                     display: flex
                     align-items: center
-                    justify-content: flex-end
                     .caixa-bio-container
                         background-color: #FFD8A9
                         display: flex
                         align-items: center
-                        width: 60vw
-                        height: 30vh
+                        width: 80vw
+                        height: 60vh
                         border-radius: 30px
-                        margin-right: 90px
                         .botoes-container
                             height: 100%
                             > div
@@ -70,6 +65,8 @@ main
                                 margin-top: 1vw
                                 color: rgba(0, 0, 0, .9)
                                 > span
+                                    line-height: 200%
+                                    font-weight: 500
                                     font-size: calc( 1vw + 1vh )
                             .references-container
                                 visibility: hidden
@@ -87,21 +84,13 @@ main
                             > .show
                                 visibility: visible
                                 transform: rotateX(0deg)
-                .right-container
-                    width: 15vw
-                    height: 65vh
-                    display: grid
-                    place-items: center
-                    > img
-                        cursor: pointer
-                        width: max(100px, 3vw)
             .down-container
                 display: flex
                 justify-content: center
                 align-items: center
                 width: 100vw
-                height: 15vh
+                height: 20vh
                 font-size: calc( 1vw + 1vh )
                 > img
-                    width: max(150px, 10vw)
+                    width: max(100px, 10vw)
                     margin-bottom: 30px
