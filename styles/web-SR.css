@@ -1,0 +1,7 @@
+
+.alert-pai-container > *,
+.home-pai-container > *,
+.project-pai-container > *,
+.bio-pai-container > * {
+  visibility: hidden;
+}

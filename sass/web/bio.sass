@@ -7,83 +7,98 @@ main
             align-items: center
             justify-content: space-around
             .up-container
-                    height: 60vh
+                margin-top: 10vh
+                height: 60vh
+                display: flex
+                align-items: center
+                justify-content: center
+                border-radius: 30px
+                .caixa-bio-container
                     display: flex
                     align-items: center
-                    .caixa-bio-container
-                        background-color: #FFD8A9
-                        display: flex
-                        align-items: center
-                        width: 80vw
-                        height: 60vh
-                        border-radius: 30px
-                        .botoes-container
-                            height: 100%
-                            > div
-                                background-color: #F1A661
-                                cursor: pointer
-                                font-size: calc( 0.5vh + 1vw )
+                    width: 80vw
+                    height: 60vh
+                    border-radius: 30px
+                    border: 1px inset rgba(255, 255, 255, 0.5)
+                    border-top: 3px inset rgba(255, 255, 255, 0.5)
+                    border-left: 3px inset rgba(255, 255, 255, 0.5)
+                    box-shadow: 20px 20px 50px rgba(0, 0, 0, .5)
+                    background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%)
+                    .botoes-container
+                        height: 100%
+                        > div
+                            background-color: #f1a761c4
+                            cursor: pointer
+                            font-size: calc( 0.5vh + 1vw )
+                            font-weight: 500
+                            color: rgba(255, 255, 255, .7)
+                            height: calc(100%/3)
+                            display: grid
+                            place-items: center
+                            padding: 0 2vw 0 2vw
+                        > #contactMeBTN
+                            border-top-left-radius: 30px
+                        > #referencesBTN
+                            border-bottom-left-radius: 30px
+                        >div.active
+                            background-color: #f1a76136
+                    .botoes-container::-webkit-scrollbar
+                        display: none
+                    .conteudo-container::-webkit-scrollbar
+                        display: none
+                    .conteudo-container
+                        position: relative
+                        text-align: left
+                        width: 100%
+                        height: 100%
+                        transform-style: preserve-3d
+                        overflow: scroll
+                        -ms-overflow-style: none
+                        scrollbar-width: none
+                        border-radius: 0px 30px 30px 0px
+                        background-color: rgba(255, 255, 255, .1)
+                        backdrop-filter: blur(5px)
+                        -webkit-backdrop-filter: blur(5px)
+                        > div
+                            background: rgba(0, 0, 0, 0)
+                        .contacMe-container
+                            visibility: hidden
+                            position: absolute
+                            transform: rotateX(90deg)
+                            transition: transform 1.5s, visibility 0s
+                            color: rgba(0, 0, 0, .9)
+                            > ul li
+                                list-style: disc
+                                font-size: calc( 1vw + 1vh )
+                                margin: 40px
+                        .bio-container
+                            visibility: hidden
+                            position: absolute
+                            transform: rotateX(90deg)
+                            transition: transform 1.5s, visibility 0s
+                            margin: 5px 20px
+                            margin-top: 1vw
+                            color: rgba(0, 0, 0, .9)
+                            > span
+                                line-height: 200%
                                 font-weight: 500
-                                color: rgba(255, 255, 255, .7)
-                                height: calc(100%/3)
-                                display: grid
-                                place-items: center
-                                padding: 0 2vw 0 2vw
-                            > #contactMeBTN
-                                border-top-left-radius: 30px
-                            > #referencesBTN
-                                border-bottom-left-radius: 30px
-                        .botoes-container::-webkit-scrollbar
-                            display: none
-                        .conteudo-container::-webkit-scrollbar
-                            display: none
-                        .conteudo-container
-                            position: relative
-                            text-align: left
-                            width: 100%
-                            height: 100%
-                            transform-style: preserve-3d
-                            overflow: scroll
-                            -ms-overflow-style: none
-                            scrollbar-width: none
-                            .contacMe-container
-                                visibility: hidden
-                                position: absolute
-                                transform: rotateX(90deg)
-                                transition: transform 1.5s, visibility 0s
-                                color: rgba(0, 0, 0, .9)
-                                > ul li
-                                    list-style: disc
+                                font-size: calc( 1vw + 1vh )
+                        .references-container
+                            visibility: hidden
+                            position: absolute
+                            transform: rotateX(90deg)
+                            transition: transform 1.5s, visibility 0s
+                            > ul li
+                                list-style: disc
+                                font-size: calc( 1vw + 1vh )
+                                margin: 40px
+                                a
+                                    display: block
                                     font-size: calc( 1vw + 1vh )
-                                    margin: 40px
-                            .bio-container
-                                visibility: hidden
-                                position: absolute
-                                transform: rotateX(90deg)
-                                transition: transform 1.5s, visibility 0s
-                                margin: 5px 20px
-                                margin-top: 1vw
-                                color: rgba(0, 0, 0, .9)
-                                > span
-                                    line-height: 200%
-                                    font-weight: 500
-                                    font-size: calc( 1vw + 1vh )
-                            .references-container
-                                visibility: hidden
-                                position: absolute
-                                transform: rotateX(90deg)
-                                transition: transform 1.5s, visibility 0s
-                                > ul li
-                                    list-style: disc
-                                    font-size: calc( 1vw + 1vh )
-                                    margin: 40px
-                                    a
-                                        display: block
-                                        font-size: calc( 1vw + 1vh )
-                                        color: rgba(0, 0, 0, .9)
-                            > .show
-                                visibility: visible
-                                transform: rotateX(0deg)
+                                    color: rgba(0, 0, 0, .9)
+                        > .show
+                            visibility: visible
+                            transform: rotateX(0deg)
             .down-container
                 display: flex
                 justify-content: center

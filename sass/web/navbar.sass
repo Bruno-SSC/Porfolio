@@ -1,7 +1,6 @@
 header
     .menu-container
-        display: grid
-        place-items: center
+        text-align: center
         .menu
             display: flex
             justify-content: space-around
@@ -10,10 +9,17 @@ header
             height: 10vh
             position: fixed
             z-index: 1
-            top: .1%
             background-color: #f1a76197
             li
-                > a
+                > .option
                     color: black
                     font-size: calc(1vw + 1vh)
                     transition: color 3s ease
+                    display: flex
+                    align-items: center
+                    gap: 3px
+                    transition: all .3s ease-in-out
+                > .option.active
+                    background-color: #f1a76197
+                    padding: 10px 20px 10px 20px
+                    border-radius: 15px

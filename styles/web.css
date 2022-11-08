@@ -34,6 +34,10 @@
   font-weight: normal;
   font-style: normal;
 }
+html {
+  width: 100vw;
+  scroll-behavior: smooth;
+}
 html * {
   margin: 0;
   padding: 0;
@@ -44,7 +48,7 @@ html * {
 }
 html body {
   font-family: sansationregular;
-  background-color: #F1A661;
+  background-color: #f1a761;
   overflow-x: hidden;
 }
 html body header {
@@ -55,7 +59,7 @@ html body footer {
   display: grid;
   place-items: center;
   height: 10vh;
-  width: 100vw;
+  width: 100%;
 }
 html body footer .copyright-container {
   color: rgba(255, 255, 255, 0.7);
@@ -65,8 +69,7 @@ html body footer .copyright-container {
 }
 
 header .menu-container {
-  display: grid;
-  place-items: center;
+  text-align: center;
 }
 header .menu-container .menu {
   display: flex;
@@ -76,26 +79,34 @@ header .menu-container .menu {
   height: 10vh;
   position: fixed;
   z-index: 1;
-  top: 0.1%;
   background-color: rgba(241, 167, 97, 0.5921568627);
 }
-header .menu-container .menu li > a {
+header .menu-container .menu li > .option {
   color: black;
   font-size: calc(1vw + 1vh);
   transition: color 3s ease;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.3s ease-in-out;
+}
+header .menu-container .menu li > .option.active {
+  background-color: rgba(241, 167, 97, 0.5921568627);
+  padding: 10px 20px 10px 20px;
+  border-radius: 15px;
 }
 
 main .paiDeTodos-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  background-color: #fff;
 }
 main .paiDeTodos-container > div {
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
-  background-color: rgba(254, 254, 254, 0.9);
   transition: right 3s, top 0s 3s;
+  border-bottom: 10px solid #F1A661;
 }
 
 main .alert-pai-container {
@@ -111,8 +122,8 @@ main .alert-pai-container h1 {
   font-weight: bold;
   margin-top: 20px;
 }
-main .alert-pai-container img {
-  width: max(15vw, 15vh);
+main .alert-pai-container > img {
+  width: max(15vw, 20vh);
 }
 main .alert-pai-container .botoes-container {
   display: flex;
@@ -125,10 +136,16 @@ main .alert-pai-container .botoes-container > div {
   font-size: calc(0.5vw + 1.5vh);
   font-weight: bold;
   cursor: pointer;
+  box-shadow: -20px 20px 50px rgba(0, 0, 0, 0.5);
+  border: 3px outset rgba(255, 255, 255, 0.9);
+}
+main .alert-pai-container .botoes-container > div > a {
+  color: black;
 }
 
 main .paiDeTodos-container .home-pai-container {
   display: flex;
+  align-items: center;
 }
 main .paiDeTodos-container .home-pai-container .left-container {
   width: 50vw;
@@ -144,18 +161,20 @@ main .paiDeTodos-container .home-pai-container .left-container .socials-containe
   display: flex;
   gap: 10px;
   justify-content: center;
-  width: 30%;
+  width: 40%;
 }
 main .paiDeTodos-container .home-pai-container .left-container .socials-container > a img {
   width: 100%;
   cursor: pointer;
 }
 main .paiDeTodos-container .home-pai-container .left-container > span {
-  font-weight: bold;
+  font-weight: bolder;
+  font-size: 1.3em;
 }
 main .paiDeTodos-container .home-pai-container .left-container > h1 {
   text-align: center;
   width: 10em;
+  font-weight: bold;
 }
 main .paiDeTodos-container .home-pai-container .right-container {
   width: 50vw;
@@ -178,21 +197,17 @@ main .paiDeTodos-container .home-pai-container .right-container > div > img {
 
 main .paiDeTodos-container .project-pai-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  /* .right-container
-  *  height: 70vh
-  *  width: 15vw
-  *  display: grid
-  *  place-items: center
-  *  > img
-  *      cursor: pointer
-  *      margin-right: 10%
-  *      width: max(100px,5vw) */
+}
+main .paiDeTodos-container .project-pai-container > h1 {
+  text-align: center;
+  width: 10em;
 }
 main .paiDeTodos-container .project-pai-container .left-container {
   height: 70vh;
-  width: 90vw;
+  width: 90%;
   gap: 30px;
   overflow: scroll;
   display: flex;
@@ -204,7 +219,8 @@ main .paiDeTodos-container .project-pai-container .left-container .project-conta
   width: clamp(300px, 500px, 25vw);
   height: 50%;
   background-color: #FFD8A9;
-  border-left: 32px solid #F1A661;
+  border: 8px inset #F1A661;
+  padding: 10px;
   display: grid;
   place-items: center;
   position: relative;
@@ -222,20 +238,9 @@ main .paiDeTodos-container .project-pai-container .left-container .project-conta
   width: 100%;
   cursor: pointer;
 }
-main .paiDeTodos-container .project-pai-container .left-container .project-container > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 400%;
-  height: 400%;
-  transform: scale(0.25);
-  -moz-transform-origin: top left;
-  -webkit-transform-origin: top left;
-  -o-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
+main .paiDeTodos-container .project-pai-container .left-container .project-container > img {
+  width: 100%;
+  object-fit: cover;
 }
 main .paiDeTodos-container .project-pai-container .left-container::-webkit-scrollbar {
   display: none;
@@ -248,23 +253,30 @@ main .paiDeTodos-container .bio-pai-container {
   justify-content: space-around;
 }
 main .paiDeTodos-container .bio-pai-container .up-container {
+  margin-top: 10vh;
   height: 60vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  border-radius: 30px;
 }
 main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container {
-  background-color: #FFD8A9;
   display: flex;
   align-items: center;
   width: 80vw;
   height: 60vh;
   border-radius: 30px;
+  border: 1px inset rgba(255, 255, 255, 0.5);
+  border-top: 3px inset rgba(255, 255, 255, 0.5);
+  border-left: 3px inset rgba(255, 255, 255, 0.5);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
 }
 main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container .botoes-container {
   height: 100%;
 }
 main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container .botoes-container > div {
-  background-color: #F1A661;
+  background-color: rgba(241, 167, 97, 0.768627451);
   cursor: pointer;
   font-size: calc(0.5vh + 1vw);
   font-weight: 500;
@@ -279,6 +291,9 @@ main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container
 }
 main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container .botoes-container > #referencesBTN {
   border-bottom-left-radius: 30px;
+}
+main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container .botoes-container > div.active {
+  background-color: rgba(241, 167, 97, 0.2117647059);
 }
 main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container .botoes-container::-webkit-scrollbar {
   display: none;
@@ -295,6 +310,13 @@ main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
+  border-radius: 0px 30px 30px 0px;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container .conteudo-container > div {
+  background: rgba(0, 0, 0, 0);
 }
 main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container .conteudo-container .contacMe-container {
   visibility: hidden;

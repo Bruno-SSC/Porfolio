@@ -1,8 +1,10 @@
 @use 'variables'
+
 main
     .paiDeTodos-container
         .home-pai-container
             display: flex
+            align-items: center
             .left-container
                 width: 50vw
                 height: 80vh
@@ -16,15 +18,17 @@ main
                     display: flex
                     gap: 10px
                     justify-content: center
-                    width: 30%
+                    width: 40%
                     > a img
                         width: 100%
                         cursor: pointer
                 > span
-                    font-weight: bold
+                    font-weight: bolder
+                    font-size: 1.3em    
                 > h1
                     text-align: center
                     width: 10em
+                    font-weight: bold
             .right-container
                 width: 50vw
                 height: 80vh

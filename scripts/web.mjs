@@ -1,34 +1,47 @@
 export default function webJS() {
     const query = document.querySelector.bind(document)
-    const queryAll = document.querySelectorAll.bind(document)
+    const queryA = document.querySelectorAll.bind(document)
 
-    //* FRAMES
-    const miniAlert = query('#miniAlert')
+    //* FRAMES & ELEMENTS
     const bioBox = query('#bioBox')
     const contactBox = query('#contactBox')
     const referenceBox = query('#referenceBox')
     const conteudoBox = query('#conteudoBox').children
+    const alertImage = query('.alert-pai-container > img')
+    const optionsNav = queryA('.option')
+    //? NAVBAR
 
-    //? projects frame
-
-    //* variables
-
-    const iframesSrc = [
-        "https://infinity-gym.netlify.app",
-        "https://xurasco.netlify.app",
-        "https://spoty-siteclone.netlify.app", "https://tetrack.netlify.app",
-        "https://luck-num.netlify.app", "https://key-gen.netlify.app",
-        "https://astron-login.netlify.app", "https://disc-bot.netlify.app"]
-
-
-    Array.from(queryAll('.project-container')).forEach(each => {
-        each.addEventListener('mouseover', (e) => {
-            showIframe(e.target)
+    Array.from(optionsNav).forEach(opt => {
+        opt.addEventListener('click', (e) => {
+            cleanNavbar()
+            e.currentTarget.classList.add('active')
         })
     })
 
+    //? alert frame
+
+    window.onload = alertImage.animate([
+        {
+            transform: 'rotateY(0deg)'
+        },
+        {
+            transform: 'rotateY(360deg)'
+        }
+    ], {
+        duration: 3000,
+        iterations: Infinity
+    })
 
     //? bio frame
+
+    const btnsBio = queryA('.bio-pai-container .up-container .caixa-bio-container .botoes-container > div')
+    Array.from(btnsBio).forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            cleanBtns()
+            e.currentTarget.classList.add('active')
+        })
+    })
+
     const contactMeBTN = query('#contactMeBTN').addEventListener('click', () => {
         cleanConteudoBox()
         contactBox.classList.add('show')
@@ -36,23 +49,10 @@ export default function webJS() {
     const bioBTN = query('#bioBTN').addEventListener('click', () => {
         cleanConteudoBox()
         bioBox.classList.add('show')
-
     })
     const referencesBTN = query('#referencesBTN').addEventListener('click', () => {
         cleanConteudoBox()
         referenceBox.classList.add('show')
-    })
-
-    //? Mini alert animate
-
-    Array.from(queryAll('.option')).forEach(opt => {
-        opt.addEventListener('click', (e) => {
-            if (e.target.id == 'projetos') return
-            miniAlert.classList.add('minialert-show')
-            setTimeout(() => {
-                miniAlert.classList.remove('minialert-show')
-            }, 2000)
-        })
     })
 
     //* FUNCTIONS
@@ -60,15 +60,10 @@ export default function webJS() {
     function cleanConteudoBox() {
         Array.from(conteudoBox).map(child => { child.classList.remove('show') })
     }
-
-    function showIframe(target) {
-        let iframe = target.parentElement.children[1]
-        let aHref = target.parentElement.children[2]
-
-        if (iframe.src != '') return
-        
-        let src = iframesSrc.shift()
-        iframe.src = src
-        aHref.href = src
+    function cleanNavbar() {
+        Array.from(optionsNav).map(opt => { opt.classList.remove('active') })
+    }
+    function cleanBtns() {
+        Array.from(btnsBio).map(btn => { btn.classList.remove('active') })
     }
 }

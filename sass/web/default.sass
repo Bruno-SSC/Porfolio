@@ -1,6 +1,8 @@
 @use 'variables'
 
 html
+    width: 100vw
+    scroll-behavior: smooth
     *
         margin: 0
         padding: 0
@@ -10,7 +12,7 @@ html
         text-decoration: none
     body
         font-family: sansationregular
-        background-color: variables.$main-color
+        background-color: #f1a761
         overflow-x: hidden
         header
             height: 10vh
@@ -19,7 +21,7 @@ html
             display: grid
             place-items: center
             height: 10vh
-            width: 100vw
+            width: 100%
             .copyright-container
                 color: rgba(255, 255, 255, .7)
                 display: grid
