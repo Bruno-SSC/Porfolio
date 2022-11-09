@@ -8,6 +8,7 @@ main
             justify-content: flex-end
             gap: 30px
             .form-div
+                position: relative
                 display: flex
                 flex-direction: column
                 gap: 15px
@@ -52,9 +53,18 @@ main
                                 height: 0
                                 opacity: .2
                             100%
-                                width: 500px
-                                height: 500px
+                                width: 1000px
+                                height: 1000px
                                 opacity: .2
+                .whatsapp
+                    position: absolute
+                    height: 8vh
+                    bottom: 2.5%
+                    right: -15%
+                    cursor: pointer
+                    > a img
+                        height: 100%
+                        object-fit: cover
             .down-container
                 display: flex
                 justify-content: center

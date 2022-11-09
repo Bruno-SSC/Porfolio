@@ -467,6 +467,7 @@ main .paiDeTodos-container .contactForm-pai-container {
   gap: 30px;
 }
 main .paiDeTodos-container .contactForm-pai-container .form-div {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -518,10 +519,21 @@ main .paiDeTodos-container .contactForm-pai-container .form-div > button span {
     opacity: 0.2;
   }
   100% {
-    width: 500px;
-    height: 500px;
+    width: 1000px;
+    height: 1000px;
     opacity: 0.2;
   }
+}
+main .paiDeTodos-container .contactForm-pai-container .form-div .whatsapp {
+  position: absolute;
+  height: 8vh;
+  bottom: 2.5%;
+  right: -15%;
+  cursor: pointer;
+}
+main .paiDeTodos-container .contactForm-pai-container .form-div .whatsapp > a img {
+  height: 100%;
+  object-fit: cover;
 }
 main .paiDeTodos-container .contactForm-pai-container .down-container {
   display: flex;
