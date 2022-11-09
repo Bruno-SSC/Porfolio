@@ -24,8 +24,9 @@ main
                     outline: none
                 > input[name="message"]
                     padding-bottom: 90px
-                > button
-                    padding: 3vh 1vw
+                > .button-form
+                    height: 10vh
+                    width: 80%
                     border-radius: 40px
                     font-size: calc( 0.5vw + 1.5vh )
                     font-weight: bold
@@ -35,32 +36,14 @@ main
                     margin-top: 10px
                     text-transform: uppercase
                     letter-spacing: 1px
-                    position: relative
-                    overflow: hidden
                     > .send-p
                         position: relative
                         z-index: 1
-                    span
-                        position: absolute
-                        background: #000
-                        transform: translate(-50%,-50%)
-                        pointer-events: none
-                        border-radius: 50%
-                        animation: animate 1s linear infinite
-                        @keyframes animate
-                            0%
-                                width: 0
-                                height: 0
-                                opacity: .2
-                            100%
-                                width: 1000px
-                                height: 1000px
-                                opacity: .2
                 .whatsapp
                     position: absolute
                     height: 8vh
                     bottom: 2.5%
-                    right: -15%
+                    right: 3%
                     cursor: pointer
                     > a img
                         height: 100%

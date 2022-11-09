@@ -18,7 +18,8 @@ main
             gap: 40px
             > div
                 background-color: variables.$main-color
-                padding: max(1.8vw, 1.8vh) max(3vw, 3vh) max(1.8vw, 1.8vh) max(3vw, 3vh)
+                height: 10vh
+                width: 17vw
                 border-radius: 40px
                 font-size: calc( 0.5vw + 1.5vh )
                 font-weight: bold
@@ -26,4 +27,8 @@ main
                 box-shadow: -20px 20px 50px rgba(0, 0, 0, .5)
                 border: 3px outset rgba(255, 255, 255, .9)
                 > a
+                    display: grid
+                    place-items: center
+                    height: 100%
+                    width: 100%
                     color: black

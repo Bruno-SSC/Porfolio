@@ -131,7 +131,8 @@ main .alert-pai-container .botoes-container {
 }
 main .alert-pai-container .botoes-container > div {
   background-color: #F1A661;
-  padding: max(1.8vw, 1.8vh) max(3vw, 3vh) max(1.8vw, 1.8vh) max(3vw, 3vh);
+  height: 10vh;
+  width: 17vw;
   border-radius: 40px;
   font-size: calc(0.5vw + 1.5vh);
   font-weight: bold;
@@ -140,6 +141,10 @@ main .alert-pai-container .botoes-container > div {
   border: 3px outset rgba(255, 255, 255, 0.9);
 }
 main .alert-pai-container .botoes-container > div > a {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  width: 100%;
   color: black;
 }
 
@@ -486,8 +491,9 @@ main .paiDeTodos-container .contactForm-pai-container .form-div > input {
 main .paiDeTodos-container .contactForm-pai-container .form-div > input[name=message] {
   padding-bottom: 90px;
 }
-main .paiDeTodos-container .contactForm-pai-container .form-div > button {
-  padding: 3vh 1vw;
+main .paiDeTodos-container .contactForm-pai-container .form-div > .button-form {
+  height: 10vh;
+  width: 80%;
   border-radius: 40px;
   font-size: calc(0.5vw + 1.5vh);
   font-weight: bold;
@@ -497,38 +503,16 @@ main .paiDeTodos-container .contactForm-pai-container .form-div > button {
   margin-top: 10px;
   text-transform: uppercase;
   letter-spacing: 1px;
-  position: relative;
-  overflow: hidden;
 }
-main .paiDeTodos-container .contactForm-pai-container .form-div > button > .send-p {
+main .paiDeTodos-container .contactForm-pai-container .form-div > .button-form > .send-p {
   position: relative;
   z-index: 1;
-}
-main .paiDeTodos-container .contactForm-pai-container .form-div > button span {
-  position: absolute;
-  background: #000;
-  transform: translate(-50%, -50%);
-  pointer-events: none;
-  border-radius: 50%;
-  animation: animate 1s linear infinite;
-}
-@keyframes animate {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 0.2;
-  }
-  100% {
-    width: 1000px;
-    height: 1000px;
-    opacity: 0.2;
-  }
 }
 main .paiDeTodos-container .contactForm-pai-container .form-div .whatsapp {
   position: absolute;
   height: 8vh;
   bottom: 2.5%;
-  right: -15%;
+  right: 3%;
   cursor: pointer;
 }
 main .paiDeTodos-container .contactForm-pai-container .form-div .whatsapp > a img {
