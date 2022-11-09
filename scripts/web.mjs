@@ -9,6 +9,7 @@ export default function webJS() {
     const conteudoBox = query('#conteudoBox').children
     const alertImage = query('.alert-pai-container > img')
     const optionsNav = queryA('.option')
+
     //? NAVBAR
 
     Array.from(optionsNav).forEach(opt => {
@@ -53,6 +54,23 @@ export default function webJS() {
     const referencesBTN = query('#referencesBTN').addEventListener('click', () => {
         cleanConteudoBox()
         referenceBox.classList.add('show')
+    })
+
+    //? Contact Form
+
+    const formBTN = query('.button-form')
+    formBTN.addEventListener('mouseenter', function (e) {
+        let x = e.pageX - e.target.offsetLeft
+        let y = e.pageY - e.target.offsetTop
+
+        let ripples = document.createElement('span')
+        ripples.style.top = y + 'px'
+        ripples.style.left = x + 'px'
+
+        this.appendChild(ripples)
+        setTimeout(() => {
+            ripples.remove()
+        }, 1000);
     })
 
     //* FUNCTIONS

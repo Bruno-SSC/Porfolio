@@ -2,10 +2,8 @@
 main
     .paiDeTodos-container
         .bio-pai-container
-            display: flex
-            flex-direction: column
-            align-items: center
-            justify-content: space-around
+            display: grid
+            place-items: center
             .up-container
                 margin-top: 10vh
                 height: 60vh
@@ -99,13 +97,4 @@ main
                         > .show
                             visibility: visible
                             transform: rotateX(0deg)
-            .down-container
-                display: flex
-                justify-content: center
-                align-items: center
-                width: 100vw
-                height: 20vh
-                font-size: calc( 1vw + 1vh )
-                > img
-                    width: max(100px, 10vw)
-                    margin-bottom: 30px
+            
