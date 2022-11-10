@@ -9,10 +9,15 @@
     <!-- Styles -->
     <link rel="stylesheet" href="../styles/web.css" />
     <link rel="stylesheet" href="../styles/web-SR.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
 
     <!-- Links -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script type="text/javascript" src="../scripts/vanilla-tilt.js"></script>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -23,6 +28,7 @@
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
       defer
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>
     <script src="../scripts/web-SR.js" defer></script>
     <script src="../scripts/main.js" defer type="module"></script>
 
@@ -247,50 +253,55 @@
           </div>
         </div>
 
-        <div id="habilitiesFrame" class="habilities-pai-container">
-          <div class="card">
-            <div class="card__content">
-              <div class="card__front html">
-                <h3 class="card__title">The Html</h3>
-                <p class="card__subtitle">Time for crafting</p>
-              </div>
-              <div class="card__back">
-                <p class="card__body">
-                  HTML é uma linguagem de marcação utilizada na construção de
-                  páginas na Web.
-                </p>
-              </div>
-            </div>
-          </div>
+        <div id="habilitiesFrame" class="habilities-pai-container swiper">
+          <div class="swiper-wrapper">
 
-          <div class="card">
-            <div class="card__content">
-              <div class="card__front css">
-                <h3 class="card__title">The css</h3>
-                <p class="card__subtitle">Time for styling</p>
-              </div>
-              <div class="card__back">
-                <p class="card__body">
-                  Cascading Style Sheets é um mecanismo para adicionar estilo a
-                  um documento web.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card__content">
-              <div class="card__front javascript">
-                <h3 class="card__title">The JS</h3>
-                <p class="card__subtitle">Time for scripting</p>
-              </div>
-              <div class="card__back">
-                <p class="card__body">
-                  Juntamente com HTML e CSS, o JavaScript é uma das três
-                  principais tecnologias da World Wide Web.
-                </p>
+            <div class="card swiper-slide">
+              <div class="card__content">
+                <div class="card__front html">
+                  <h3 class="card__title">The Html</h3>
+                  <p class="card__subtitle">Time for crafting</p>
+                </div>
+                <div class="card__back">
+                  <p class="card__body">
+                    HTML é uma linguagem de marcação utilizada na construção de
+                    páginas na Web.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
+  
+            <div class="card swiper-slide">
+              <div class="card__content">
+                <div class="card__front css">
+                  <h3 class="card__title">The css</h3>
+                  <p class="card__subtitle">Time for styling</p>
+                </div>
+                <div class="card__back">
+                  <p class="card__body">
+                    Cascading Style Sheets é um mecanismo para adicionar estilo a
+                    um documento web.
+                  </p>
+                </div>
+              </div>
+            </div>
+  
+            <div class="card swiper-slide">
+              <div class="card__content">
+                <div class="card__front javascript">
+                  <h3 class="card__title">The JS</h3>
+                  <p class="card__subtitle">Time for scripting</p>
+                </div>
+                <div class="card__back">
+                  <p class="card__body">
+                    Juntamente com HTML e CSS, o JavaScript é uma das três
+                    principais tecnologias da World Wide Web.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>          
         </div>
 
         <div id="contactForm" class="contactForm-pai-container">
@@ -318,7 +329,10 @@
               <p class="send-p">Send!</p>
             </button>
             <div class="whatsapp">
-              <a target="_blank" href="https://wa.me/55996654308?text=Quero%20fazer%20um%20site%20para%20minha%20empresa!">
+              <a
+                target="_blank"
+                href="https://wa.me/55996654308?text=Quero%20fazer%20um%20site%20para%20minha%20empresa!"
+              >
                 <img src="../styles/images/logo-whatsapp.png" alt="" />
               </a>
             </div>

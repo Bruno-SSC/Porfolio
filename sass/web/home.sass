@@ -24,7 +24,7 @@ main
                         cursor: pointer
                 > span
                     font-weight: bolder
-                    font-size: 1.3em    
+                    font-size: 1.3em
                 > h1
                     text-align: center
                     width: 10em
@@ -35,10 +35,7 @@ main
                 display: grid
                 place-items: center
                 > div
-                    width: clamp(500px ,30vw, 700px)
+                    width: max(30vw, 30vh)
                     > img
                         width: 100%
                         object-fit: fill
-                    @media screen and (max-height: 763px)
-                        > img
-                            width: 70%

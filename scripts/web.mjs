@@ -56,6 +56,14 @@ export default function webJS() {
         referenceBox.classList.add('show')
     })
 
+    //? Skills frame
+
+    const portrait = window.matchMedia("(orientation: portrait)")
+
+    if (portrait.matches) {
+        
+    }
+
     //* FUNCTIONS
 
     function cleanConteudoBox() {
