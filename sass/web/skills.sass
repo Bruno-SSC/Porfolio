@@ -12,78 +12,79 @@
 
 main
     .paiDeTodos-container
+        overflow-x: hidden
         .habilities-pai-container
-            display: flex
-            align-items: center
-            .swiper-wrapper
-                display: flex
-                align-items: center
-                justify-content: center
-                gap: 30px
-                .card
-                    display: inline
-                    width: 25vw
-                    .card__content
-                        text-align: center
-                        position: relative
-                        padding: 10em 5em
-                        transition: transform 3s
-                        transform-style: preserve-3d // elementos se movem independentemente do espaço
-                        .card__front,
-                        .card__back
-                            position: absolute
-                            top: 0
-                            bottom: 0
-                            left: 0
-                            right: 0
-                            padding: 5em 3em
-                            backface-visibility: hidden
+            position: relative
+            display: grid
+            place-items: center
+            .swiper
+                margin-top: 15vh
+                width: 80vw
+                height: 80vh
+                .swiper-wrapper
+                    .card
+                        .card__content
+                            text-align: center
+                            position: relative
+                            padding: 10em 5em
+                            transition: transform 3s
                             transform-style: preserve-3d // elementos se movem independentemente do espaço
-                            display: grid
-                            align-content: center
-                            border-radius: 15px
-                        .card__front
-                            background-color: var(--clr)
-                            background-size: cover
-                            background-blend-mode: overlay
-                            background-position: center
-                            color: #333
-                            .card__title
-                                order: 2
-                                font-size: 3.5rem
-                                text-transform: uppercase
-                                transform: var(--level-three) //isso é o que "desgruda da parede"
-                            .card__subtitle
-                                transform: var(--level-two)
-                                text-transform: uppercase
-                                letter-spacing: 4px
-                                font-size: .75rem
-                                font-weight: var(--fw-bold)
-                                opacity: .7
-                        .card__back
+                            .card__front,
+                            .card__back
+                                position: absolute
+                                top: 0
+                                bottom: 0
+                                left: 0
+                                right: 0
+                                padding: 5em 3em
+                                backface-visibility: hidden
+                                transform-style: preserve-3d // elementos se movem independentemente do espaço
+                                display: grid
+                                align-content: center
+                                border-radius: 15px
+                            .card__front
+                                background-color: var(--clr)
+                                background-size: cover
+                                background-blend-mode: overlay
+                                background-position: center
+                                color: #333
+                                .card__title
+                                    order: 2
+                                    font-size: 3.5rem
+                                    text-transform: uppercase
+                                    transform: var(--level-three) //isso é o que "desgruda da parede"
+                                .card__subtitle
+                                    transform: var(--level-two)
+                                    text-transform: uppercase
+                                    letter-spacing: 4px
+                                    font-size: .75rem
+                                    font-weight: var(--fw-bold)
+                                    opacity: .7
+                            .card__back
+                                transform: rotateY(.5turn)
+                                color: var(--clr)
+                                background: #333
+                                .card__body
+                                    transform: var(--level-two)
+                                    font-weight: var(--fw-normal)
+                                    font-size: 1.4rem
+                                    line-height: 1.6
+                            .card__front::before
+                                content: ''
+                                position: absolute
+                                --spacer: 1em
+                                top: var(--spacer)
+                                left: var(--spacer)
+                                right: var(--spacer)
+                                bottom: var(--spacer)
+                                border: 3px solid black
+                                transform: var(--level-one)
+                        .card__front.html
+                            background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg)
+                        .card__front.css
+                            background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg)
+                        .card__front.javascript
+                            background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg)
+                    @media screen and (min-width: 1000px)
+                        .card:hover .card__content
                             transform: rotateY(.5turn)
-                            color: var(--clr)
-                            background: #333
-                            .card__body
-                                transform: var(--level-two)
-                                font-weight: var(--fw-normal)
-                                font-size: 1.4rem
-                                line-height: 1.6
-                        .card__front::before
-                            content: ''
-                            position: absolute
-                            --spacer: 1em
-                            top: var(--spacer)
-                            left: var(--spacer)
-                            right: var(--spacer)
-                            bottom: var(--spacer)
-                            border: 3px solid black
-                            transform: var(--level-one)
-                    .card__front.html
-                        background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg)
-                    .card__front.css
-                        background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg)
-                    .card__front.javascript
-                        background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg)
-                .card:hover .card__content //mouse em cima do card movimenta o conteudo, não o card
-                    transform: rotateY(.5turn)

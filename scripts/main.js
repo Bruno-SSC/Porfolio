@@ -5,7 +5,7 @@ const portrait = window.matchMedia("(orientation: portrait)")
 const landscape = window.matchMedia("(orientation: landscape)")
 
 if (portrait.matches) {
-    mobileJS()
+    webJS()
 }
 if (landscape.matches) {
     webJS()

@@ -88,7 +88,7 @@ header .menu-container .menu li > .option {
   display: flex;
   align-items: center;
   gap: 3px;
-  transition: all 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out, border-radius 0.3s ease-in-out;
 }
 header .menu-container .menu li > .option.active {
   background-color: rgba(241, 167, 97, 0.5921568627);
@@ -103,10 +103,11 @@ main .paiDeTodos-container {
   background-color: #fff;
 }
 main .paiDeTodos-container > div {
-  min-height: 100vh;
+  height: 100vh;
   width: 100vw;
   transition: right 3s, top 0s 3s;
   border-bottom: 10px solid #F1A661;
+  overflow: hidden;
 }
 
 main .alert-pai-container {
@@ -372,29 +373,28 @@ main .paiDeTodos-container .bio-pai-container .up-container .caixa-bio-container
   --clr: #f1a761;
 }
 
+main .paiDeTodos-container {
+  overflow-x: hidden;
+}
 main .paiDeTodos-container .habilities-pai-container {
-  display: flex;
-  align-items: center;
+  position: relative;
+  display: grid;
+  place-items: center;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
+main .paiDeTodos-container .habilities-pai-container .swiper {
+  margin-top: 15vh;
+  width: 80vw;
+  height: 80vh;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card {
-  display: inline;
-  width: 25vw;
-}
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__content {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content {
   text-align: center;
   position: relative;
   padding: 10em 5em;
   transition: transform 3s;
   transform-style: preserve-3d;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__content .card__front,
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__content .card__back {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__front,
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__back {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -407,20 +407,20 @@ main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card
   align-content: center;
   border-radius: 15px;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__content .card__front {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__front {
   background-color: var(--clr);
   background-size: cover;
   background-blend-mode: overlay;
   background-position: center;
   color: #333;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__content .card__front .card__title {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__front .card__title {
   order: 2;
   font-size: 3.5rem;
   text-transform: uppercase;
   transform: var(--level-three);
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__content .card__front .card__subtitle {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__front .card__subtitle {
   transform: var(--level-two);
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -428,18 +428,18 @@ main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card
   font-weight: var(--fw-bold);
   opacity: 0.7;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__content .card__back {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__back {
   transform: rotateY(0.5turn);
   color: var(--clr);
   background: #333;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__content .card__back .card__body {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__back .card__body {
   transform: var(--level-two);
   font-weight: var(--fw-normal);
   font-size: 1.4rem;
   line-height: 1.6;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__content .card__front::before {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__front::before {
   content: "";
   position: absolute;
   --spacer: 1em;
@@ -450,17 +450,19 @@ main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card
   border: 3px solid black;
   transform: var(--level-one);
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__front.html {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__front.html {
   background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg);
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__front.css {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__front.css {
   background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg);
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card .card__front.javascript {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__front.javascript {
   background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg);
 }
-main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card:hover .card__content {
-  transform: rotateY(0.5turn);
+@media screen and (min-width: 1000px) {
+  main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card:hover .card__content {
+    transform: rotateY(0.5turn);
+  }
 }
 
 main .paiDeTodos-container .contactForm-pai-container {
@@ -532,8 +534,23 @@ main .paiDeTodos-container .contactForm-pai-container .down-container > img {
 }
 
 @media screen and (max-width: 1000px) {
+  header {
+    max-height: 0;
+  }
+  header .menu-container {
+    display: none;
+  }
   main .paiDeTodos-container {
-    overflow-x: hidden;
+    background-color: #F1A661;
+  }
+  main .paiDeTodos-container > div {
+    background-color: #fff;
+    height: 80vh;
+    border: 0;
+  }
+  main .paiDeTodos-container .alert-pai-container {
+    margin-top: 10vh;
+    border-top-left-radius: 100px;
   }
   main .paiDeTodos-container .alert-pai-container .botoes-container {
     flex-direction: column;
@@ -543,29 +560,31 @@ main .paiDeTodos-container .contactForm-pai-container .down-container > img {
     width: 25vh;
   }
   main .paiDeTodos-container .home-pai-container {
+    height: 80vh;
     flex-direction: column;
     justify-content: center;
+    gap: 10vh;
   }
   main .paiDeTodos-container .home-pai-container .left-container,
 main .paiDeTodos-container .home-pai-container .right-container {
     height: 30vh;
     width: 100vw;
   }
+  main .paiDeTodos-container .project-pai-container {
+    height: 100vh;
+  }
   main .paiDeTodos-container .project-pai-container .left-container {
     justify-content: center;
   }
   main .paiDeTodos-container .project-pai-container .left-container .project-container {
-    height: 30%;
+    height: 40%;
   }
-  main .paiDeTodos-container .habilities-pai-container {
-    width: fit-content;
-  }
-  main .paiDeTodos-container .habilities-pai-container .swiper-wrapper .card {
-    width: 60vw;
+  main .paiDeTodos-container .bio-pai-container .up-container {
+    margin-top: 0;
   }
   main .paiDeTodos-container .contactForm-pai-container .form-div {
     width: 70vw;
-    margin-bottom: 50%;
+    margin-bottom: 15%;
   }
   main .paiDeTodos-container .contactForm-pai-container .form-div > input {
     padding: 2rem;
@@ -586,6 +605,14 @@ main .paiDeTodos-container .home-pai-container .right-container {
   }
   main .paiDeTodos-container .contactForm-pai-container .down-container > img {
     margin-bottom: 0;
+  }
+  main .paiDeTodos-container .habilities-pai-container .swiper {
+    margin-top: 0vh;
+    width: 70vw;
+    height: 50vh;
+  }
+  main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card.active .card__content {
+    transform: rotateY(0.5turn);
   }
 }
 

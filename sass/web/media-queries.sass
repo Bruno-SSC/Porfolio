@@ -1,34 +1,45 @@
 @media screen and (max-width:1000px)
+    header
+        max-height: 0
+        .menu-container
+            display: none
     main
         .paiDeTodos-container
-            overflow-x: hidden
+            background-color: #F1A661
+            > div
+                background-color: #fff
+                height: 80vh
+                border: 0
             .alert-pai-container
+                margin-top: 10vh
+                border-top-left-radius: 100px
                 .botoes-container
                     flex-direction: column
                     > div
                         height: 15vw
                         width: 25vh
             .home-pai-container
+                height: 80vh
                 flex-direction: column
                 justify-content: center
+                gap: 10vh
                 .left-container,
                 .right-container
                     height: 30vh
                     width: 100vw
             .project-pai-container
+                height: 100vh
                 .left-container
                     justify-content: center
                     .project-container
-                        height: 30%
-            .habilities-pai-container
-                width: fit-content
-                .swiper-wrapper
-                    .card
-                        width: 60vw
+                        height: 40%
+            .bio-pai-container
+                .up-container
+                    margin-top: 0
             .contactForm-pai-container
                 .form-div
                     width: 70vw
-                    margin-bottom: 50%
+                    margin-bottom: 15%
                     > input
                         padding: 2rem
                         font-size: 16px
@@ -45,3 +56,11 @@
                     line-height: 130%
                     >img
                         margin-bottom: 0
+            .habilities-pai-container
+                .swiper
+                    margin-top: 0vh
+                    width: 70vw
+                    height: 50vh
+                    .swiper-wrapper
+                        .card.active .card__content
+                            transform: rotateY(.5turn)
