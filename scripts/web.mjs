@@ -13,17 +13,6 @@ export default function webJS() {
 
     //? NAVBAR
 
-    if (portrait.matches) {
-        const swiper = new Swiper(".menu-container .swiper-nav", {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            loop: true,
-            centerSlide: 'true',
-            fade: 'true',
-            direction: 'vertical'
-        })
-    }
-
     Array.from(optionsNav).forEach(opt => {
         opt.addEventListener('click', (e) => {
             cleanNavbar()
@@ -82,7 +71,7 @@ export default function webJS() {
         })
     }
 
-    const swiper = new Swiper(".swiper", {
+    const swiper = new Swiper("main .habilities-pai-container .swiper", {
         slidesPerView: 1,
         spaceBetween: 25,
         loop: true,

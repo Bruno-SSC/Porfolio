@@ -386,15 +386,15 @@ main .paiDeTodos-container .habilities-pai-container .swiper {
   width: 80vw;
   height: 80vh;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__content {
   text-align: center;
   position: relative;
   padding: 10em 5em;
   transition: transform 3s;
   transform-style: preserve-3d;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__front,
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__back {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__content .card__front,
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__content .card__back {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -407,20 +407,20 @@ main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .ca
   align-content: center;
   border-radius: 15px;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__front {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__content .card__front {
   background-color: var(--clr);
   background-size: cover;
   background-blend-mode: overlay;
   background-position: center;
   color: #333;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__front .card__title {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__content .card__front .card__title {
   order: 2;
   font-size: 3.5rem;
   text-transform: uppercase;
   transform: var(--level-three);
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__front .card__subtitle {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__content .card__front .card__subtitle {
   transform: var(--level-two);
   text-transform: uppercase;
   letter-spacing: 4px;
@@ -428,18 +428,18 @@ main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .ca
   font-weight: var(--fw-bold);
   opacity: 0.7;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__back {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__content .card__back {
   transform: rotateY(0.5turn);
   color: var(--clr);
   background: #333;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__back .card__body {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__content .card__back .card__body {
   transform: var(--level-two);
   font-weight: var(--fw-normal);
   font-size: 1.4rem;
   line-height: 1.6;
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__content .card__front::before {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__content .card__front::before {
   content: "";
   position: absolute;
   --spacer: 1em;
@@ -450,13 +450,13 @@ main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .ca
   border: 3px solid black;
   transform: var(--level-one);
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__front.html {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__front.html {
   background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg);
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__front.css {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__front.css {
   background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg);
 }
-main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .card .card__front.javascript {
+main .paiDeTodos-container .habilities-pai-container .swiper .swiper-wrapper .swiper-slide .card__front.javascript {
   background-image: url(https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg);
 }
 @media screen and (min-width: 1000px) {
@@ -535,9 +535,6 @@ main .paiDeTodos-container .contactForm-pai-container .down-container > img {
 
 @media screen and (max-width: 1000px) {
   header {
-    max-height: 0;
-  }
-  header .menu-container {
     display: none;
   }
   main .paiDeTodos-container {
